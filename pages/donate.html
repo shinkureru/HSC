@@ -1,44 +1,68 @@
-<form class="row g-3">
-  <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捐款資料填寫</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+
+    <div class="container border d-flex">
+        <div class="donateLeft">
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label for="inputName" class="form-label">捐款人姓名</label>
+              <input type="text" class="form-control" id="inputName" placeholder="請輸入姓名">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPhoneNumber" class="form-label">電話</label>
+              <input type="number" class="form-control hideArrow" id="inputPhoneNumber" placeholder="請輸入電話">
+            </div>
+            <div class="col-12">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" id="inputEmail" placeholder="請輸入Email">
+            </div>
+            <div class="col-12">
+              <label for="inputDonateAmount" class="form-label">捐款金額</label>
+              <input type="number" class="form-control hideArrow" id="inputDonateAmount" placeholder="請輸入金額">
+            </div>
+            <div class="col-md-6">
+              <label for="inputText" class="form-label">想對團隊說的話(選填)</label>
+              <textarea class="form-control contentResize" id="inputText" placeholder="請輸入內容" maxlength="150"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="donateRight border-start">
+            <p>信用卡資訊</p>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-12">
+                  <label for="cardName" class="form-label">持卡人姓名</label>
+                  <input type="text" class="form-control" id="cardName" placeholder="請輸入信用卡上的姓名">
+                </div>
+                <div class="col-md-8">
+                  <label for="cardNum" class="form-label">信用卡卡號</label>
+                  <div class="cardNumDflex d-flex">
+                  <input type="text" class="form-control" id="cardNum" placeholder="0000">
+                  <input type="text" class="form-control" id="cardNum" placeholder="0000">
+                  <input type="text" class="form-control" id="cardNum" placeholder="0000">
+                  <input type="text" class="form-control" id="cardNum" placeholder="0000">
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="expiration" class="form-label">卡片有效期限</label>
+                  <input type="text" class="form-control" id="expiration" placeholder="MM/YY">
+                </div>
+                <div class="col-md-6">
+                    <label for="CVCcode" class="form-label">信用卡安全碼</label>
+                    <input type="text" class="form-control" id="CVCcode" placeholder="背面三碼">
+                  </div>
+                </div>
+              </form>
+        </div>
+    </div> 
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
