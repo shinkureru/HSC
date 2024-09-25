@@ -5,3 +5,121 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.navbar{
+  width: 350px;
+}
+
+.btn{
+  color:white;
+  border: none;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+// .btnhover{
+//   color: white;
+//   position: relative;
+//   text-decoration: none;
+//   transition: all 0.15s ease-out;
+//   &:before {
+//     color:#CACF87;
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 1px;
+//     bottom: 0px;
+//     left: 0;
+//     background: #CACF87;
+//     visibility: hidden;
+//     transform: scaleX(0);
+//     transition: all 0.3s ease-in-out 0s;
+//   }
+//   &:hover {
+//     transition: all 0.15s ease-out;
+    
+//     &:before {
+//         visibility: visible;
+//         transform: scaleX(1);
+//     }
+//   }
+// }
+
+
+.btnhover:hover{
+  color:#CACF87;
+  transition: all 0.2s ease-out;
+}
+
+
+.donateSection{
+  user-select: none;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+  &:before {
+    content: "";
+    position: absolute;
+    margin-bottom: -2px;
+    width: 100%;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background: #CACF87;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover {
+    transition: all 0.15s ease-out;
+    &:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+  }
+}
+
+.donateSection:hover{
+  color:#CACF87;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.dropdown-menu{
+  margin-left: -4rem;
+  --bs-dropdown-min-width: 0;
+  --bs-dropdown-spacer: 1rem;
+  --bs-dropdown-item-padding-y: 0.4rem;
+  --bs-dropdown-link-hover-bg: #B2BA61;
+    --bs-dropdown-link-active-color: #ffffff;
+    --bs-dropdown-padding-y: 0;
+  border-radius:1rem;
+  border: none;
+  text-align: center;
+  .dropdown-item{
+    width: 144px;
+    height: 51px;
+    line-height: 3.5rem;
+  }
+  .item-t-r{
+    // padding-top: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+  .item-b-r{
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    // padding-bottom: 0.5rem;
+  }
+}
+.custom-member-btn{
+  --bs-btn-bg: none;
+  border: 0.5px white solid;
+  border-radius: 1.6rem;
+  width: 143px;
+  height: 48px;
+}
+.member{
+  padding-left: 68px;
+  padding-right: 68px;
+}
