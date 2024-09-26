@@ -7,67 +7,61 @@
 </head>
 <body>
     <%- include('./layout/header'); -%>
-
-    <div class="container d-flex">
-        <div class="row">
-            <div class="column d-flex">
-                
-            </div>
-        </div>
-        <div class="donateLeft border">
+    <div class="donateContainer d-flex border  border-HSCcolor nstFont">
+        <div class="donateLeft ">
             <div class="row">
                 <div class="col">
                     <form class="row g-6">
-                        <div class="col-md-6 mb-5">
+                        <div class="col-md-6 mb-3">
                             <label for="inputName" class="form-label fs-7">捐款人姓名</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="請輸入姓名">
+                            <input type="text" class="form-control border-HSCcolor" id="inputName" placeholder="請輸入姓名">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPhoneNumber" class="form-label fs-7">電話</label>
-                            <input type="number" class="form-control hideArrow" id="inputPhoneNumber" placeholder="請輸入電話">
+                            <input type="number" class="form-control hideArrow border-HSCcolor" id="inputPhoneNumber" placeholder="請輸入電話">
                         </div>
-                        <div class="col-12 mb-5">
+                        <div class="col-12 mb-3">
                             <label for="inputEmail" class="form-label fs-7">Email</label>
-                            <input type="text" class="form-control" id="inputEmail" placeholder="請輸入Email">
+                            <input type="text" class="form-control border-HSCcolor" id="inputEmail" placeholder="請輸入Email">
                         </div>
-                        <div class="col-12 mb-5">
+                        <div class="col-12 mb-3">
                             <label for="inputDonateAmount" class="form-label fs-7">捐款金額</label>
-                            <input type="number" class="form-control hideArrow" id="inputDonateAmount" placeholder="請輸入金額">
+                            <input type="number" class="form-control hideArrow border-HSCcolor" id="inputDonateAmount" placeholder="請輸入金額">
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 textContainer">
                             <label for="inputText" class="form-label fs-7">想對團隊說的話(選填)</label>
-                            <textarea class="form-control contentResize" id="inputText" placeholder="請輸入內容" maxlength="150"></textarea>
+                            <textarea class="form-control contentResize border-HSCcolor" id="inputText" placeholder="請輸入內容"></textarea>
+                            <div id="charCount" class="textCount">0/150</div>  
                         </div>
                     </form>
                  </div>
             </div>
         </div>
-        <div class="donateRight border">
+        <div class="donateRight border-start bg-HSCcolor bg-opacity-50">
             <div class="row">
                 <div class="col">
-                    <p class="mb-5">信用卡資訊</p>
+                    <p class="cradText fs-5 mb-4">信用卡資訊</p>
                     <form class="row">
                         <div class="col-12 mb-5">
-                            <label for="cardName" class="form-label">持卡人姓名</label>
-                            <input type="text" class="form-control" id="cardName" placeholder="請輸入信用卡上的姓名">
+                            <label for="cardName" class="form-label fs-7">持卡人姓名</label>
+                            <input type="text" class="form-control border-HSCcolor" id="cardName" placeholder="請輸入信用卡上的姓名">
                         </div>
                         <div class="col-12 mb-5">
-                            <label for="cardNum" class="form-label">信用卡卡號</label>
+                            <label for="cardNum" class="form-label fs-7">信用卡卡號</label>
                             <div class="d-flex">
-                            <input type="text" class="form-control cardNumMg" id="cardNum" placeholder="0000">
-                            <input type="text" class="form-control cardNumMg" id="cardNum" placeholder="0000">
-                            <input type="text" class="form-control cardNumMg" id="cardNum" placeholder="0000">
-                            <input type="text" class="form-control" id="cardNum" placeholder="0000">
+                            <input type="number" class="form-control cardNumMg placehPosition hideArrow border-HSCcolor" id="cardNum" placeholder="0000">
+                            <input type="number" class="form-control cardNumMg placehPosition hideArrow border-HSCcolor" id="cardNum" placeholder="0000">
+                            <input type="number" class="form-control cardNumMg placehPosition hideArrow border-HSCcolor" id="cardNum" placeholder="0000">
+                            <input type="number" class="form-control placehPosition hideArrow border-HSCcolor" id="cardNum" placeholder="0000">
                         </div>
                         </div>
                         <div class="col-6">
-                            <label for="expiration" class="form-label">卡片有效期限</label>
-                            <input type="text" class="form-control" id="expiration" placeholder="MM/YY">
+                            <label for="expiration" class="form-label fs-7">卡片有效期限</label>
+                            <input type="text" class="form-control border-HSCcolor" id="expiration" placeholder="MM/YY">
                         </div>
                         <div class="col-6">
-                            <label for="CVCcode" class="form-label">信用卡安全碼</label>
-                            <input type="text" class="form-control" id="CVCcode" placeholder="背面三碼">
-                            
+                            <label for="CVCcode" class="form-label fs-7">信用卡安全碼</label>
+                            <input type="number" class="form-control border-HSCcolor" id="CVCcode hideArrow" placeholder="背面三碼">
                         </div>
                     </form>
                 </div>
