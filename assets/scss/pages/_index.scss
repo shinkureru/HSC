@@ -1,3 +1,107 @@
-.index-title {
-  font-size: 100px;
+.home-navbarimage{
+  background-image:url(/assets/images/kv.png);
+  width:100%;
+  max-height:1177px;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pb-custom{
+  padding-bottom: 387px; 
+}
+
+.u-s-n{
+  user-select: none;
+}
+
+.h1-HSC-title{
+  // max-height: 100%;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.473);
+  letter-spacing:0.02em;
+  font-size:160px;
+  color:white;
+  line-height: 145px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  .span-h{
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; /* 確保 transform 可以生效 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
+    color:#767E32;
+    &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+    }
+  }
+  .span-s{
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; /* 確保 transform 可以生效 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
+    color:#FFE142;
+    &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#fde155;
+    }
+  }
+  .span-c{
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; /* 確保 transform 可以生效 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
+    color:#767E32;
+    &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+    }
+  }
+}
+
+.h2-title{
+  font-size: 56px;
+  letter-spacing:0.03em;
+  color:white;
+  line-height: 67px;
+  font-weight: 800;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  letter-spacing:0.1em;
+}
+.h3-title{
+  color:white;
+  font-size:28px;
+  line-height: 33.6px;
+}
+.section-2-area{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.bg-w{
+  background-color: white;
+}
+.h4-title{
+  color:black;
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing:0.05em;
+  span{
+    color:#959E43;
+  }
+}
+.h4-content-1{
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  // font-weight: 500;
+}
+.h4-content-2{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  // font-weight: 400;
+}
+
+.teamImg img{
+  max-width:100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

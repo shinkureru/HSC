@@ -7,17 +7,150 @@
     <title>HSC流浪貓協助平台</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <div class="home-navbarimage mx-auto">
+      <div class="navbar-w-100 mx-auto">
+          <div class="row">
+              <div class="column">
+                  <div class="d-flex align-items-center h-100-custom">
+      
+                      <!-- HSC-home-logo -->
+                      <div class="homeLogo text-light p-5 fs-1 font-weight-bold me-auto"><a href="index.html" class="HSC-custom-logo">HSC</a></div>
+      
+                      <!-- navbarSection -->
+                      <div class="navbar d-flex justify-content-between nstFont fs-9">
+                          <div class="firstPageSection px-4">
+                              <div class="dropdown">
+                                  <div class="navBarSection" data-bs-toggle="dropdown">
+                                      浪貓領養
+                                  </div>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item item-t-r" href="#">代保管領養</a></li>
+                                    <li><a class="dropdown-item" href="#">登記須領養</a></li>
+                                    <li><a class="dropdown-item" href="#">查看已領養</a></li>
+                                    <li><a class="dropdown-item item-b-r" href="adopt.html">查詢附近浪貓</a></li>
+                                  </ul>
+                                </div>
+                          </div>
+                          <div class="secondPageSection px-4">
+                              <div class="dropdown">
+                                  <div class="navBarSection" data-bs-toggle="dropdown">
+                                      愛心樂捐
+                                  </div>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item item-t-r" href="donate.html">支持創作者</a></li>
+                                    <li><a class="dropdown-item item-b-r" href="#">支持浪貓單位</a></li>
+                                  </ul>
+                                </div>
+                          </div>
+                          <div class="thirdPageSection px-4">
+                              <div class="dropdown">
+                                  <div class="navBarSection" data-bs-toggle="dropdown">
+                                      浪貓知識
+                                  </div>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item item-t-r" href="#">野外守則列表</a></li>
+                                    <li><a class="dropdown-item item-b-r" href="#">愛護守則列表</a></li>
+                                  </ul>
+                                </div>
+                          </div>
+                          <div class="fourthPageSection ps-4">
+                              <div class="dropdown">
+                                  <div class="navBarSection" data-bs-toggle="dropdown">
+                                      緊急通報
+                                  </div>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item item-t-r" href="#">遺失協尋</a></li>
+                                    <li><a class="dropdown-item" href="#">協助醫療</a></li>
+                                    <li><a class="dropdown-item item-b-r" href="#">中途安置</a></li>
+                                  </ul>
+                                </div>
+                          </div>
+                      </div>
+      
+                      <!-- memberSignIn/SignOut -->
+                      <div class="member">
+                          <!-- Button trigger modal -->
+                          <button type="button" class="d-flex align-items-center justify-content-center btn btn-primary custom-member-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              <div class="memberSvg "><img src="/assets/images/icon/24px/solid/ueser.svg" alt=""></div>
+                              <div class="memberText nstFont fs-9 ps-1">登入/註冊</div>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    ...
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row justify-content-center u-s-n">
+            <!-- banner-side-section-left -->
+              <div class="banner-side-section-l col pb-custom poppinsFont">  
+                 <div class="h1-HSC-title">
+                  <div class="H-part"><span  class="span-h">H</span>elp</div>
+                  <div class="S-part"><span class="span-s">S</span>tray</div>
+                  <div class="C-part"><span  class="span-c">C</span>ats</div>
+                 </div>
+                 <div class="h2-title nstFont">
+                  浪浪不再哭泣！
+                 </div>
+                 <div class="h3-title nstFont">
+                  讓浪浪接受完善的醫療與照顧
+                 </div>
+              </div>
+              <!-- banner-side-section-right -->
+              <div class="banner-side-section-r col"> 
+                 
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="section-2-area bg-w">
+      <div class="container">
+        <div class="row align-items-center justify-content-center u-s-n ">
+          <div class="col">
+            <div class="h4-title">
+              About <span>Us</span>
+            </div>
+            <div class="h4-content-1 nstFont">
+              「<span class="poppinsFont">Help Stray Cats</span>  」是平均正職人力僅4人的非營利組織
+            </div>
+            <div class="h4-content-2 nstFont">
+              我們是一個人力少，深耕在地且附有使命感的團隊。<br>
+              多年來一同媒合了台灣中南部救援超過300隻浪貓，深入了解愛心浪貓服務與中途困境，訂下「願所有相遇的浪貓，都能恰逢其時」的使命。
+            </div>
+          </div>
+          <div class="col">
+            <div class="teamImg"><img src="/assets/images/Frame 1003029.jpg" alt="HSCteamImg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-3-area"></div>
+    <div class="section-4-area"></div>
+    <div class="section-5-area"></div>
+  
 
-   <h1>HSC</h1>
-   <p>引入測試：</p>
-   <a href="adopt.html">adopt</a>
-   <a href="donate.html">donate</a>
+    
 
 
-    <%- include('./layout/footer'); -%>
+    
 
     <script type="module" src="../main.js"></script>
-    <script src="all.js"></script>
   </body>
 </html>

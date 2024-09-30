@@ -5,10 +5,14 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.h-100-custom{
+  height: 140px;
+  margin-bottom: 80px;
+}
 
 .navbar-w-100{
   max-width: 1920px;
-  max-height: 200px;
+  max-height: 250px;
 }
 .navbar{
   max-width: 600px;
@@ -128,12 +132,26 @@
   }
 }
 
+.pagePath{
+  height:32px;
+}
+
 .breadcrumb{
   color:white;
   .active{
     color:#CACF87;
   }
+  a{
+   width: 80px; //注意：如果其他分頁字數太多，要特別設標籤做自定義寬度設定
+  }
 }
+
+.breadcrumb a:hover{
+  color:#dee2a9;
+  font-size:18.5px;
+  transition: all 0.3s ease-out;
+}
+
 
 .pageTitle{
   color:white;
@@ -144,3 +162,5 @@
   padding-bottom: 35px;
   padding-top: 10px;
 }
+
+
