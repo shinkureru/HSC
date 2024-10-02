@@ -142,14 +142,17 @@
     color:#CACF87;
   }
   a{
-   width: 80px; //注意：如果其他分頁字數太多，要特別設標籤做自定義寬度設定
+  //  width: 80px; //注意：如果其他分頁字數太多，要特別設標籤做自定義寬度設定
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: all 0.3s ease-out; /* 增加動畫效果 */
+  -webkit-font-smoothing: antialiased; //讓動畫有平滑效果，不要那麼銳利
   }
 }
 
 .breadcrumb a:hover{
   color:#dee2a9;
-  font-size:18.5px;
-  transition: all 0.3s ease-out;
+  transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+  
 }
 
 
