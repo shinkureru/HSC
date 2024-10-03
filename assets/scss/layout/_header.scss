@@ -1,12 +1,21 @@
 .navbarimage{
   background-image:url(/assets/images/innerPage/innerNavSet.jpg);
-  max-width: 1920px;
+  width:100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+.h-100-custom{
+  height: 140px;
+  margin-bottom: 80px;
+}
+
+.navbar-w-100{
+  max-width: 1920px;
+  max-height: 250px;
+}
 .navbar{
-  width: 350px;
+  max-width: 600px;
 }
 
 .btn{
@@ -16,42 +25,13 @@
   padding-left: 0px;
 }
 
-// .btnhover{
-//   color: white;
-//   position: relative;
-//   text-decoration: none;
-//   transition: all 0.15s ease-out;
-//   &:before {
-//     color:#CACF87;
-//     content: "";
-//     position: absolute;
-//     width: 100%;
-//     height: 1px;
-//     bottom: 0px;
-//     left: 0;
-//     background: #CACF87;
-//     visibility: hidden;
-//     transform: scaleX(0);
-//     transition: all 0.3s ease-in-out 0s;
-//   }
-//   &:hover {
-//     transition: all 0.15s ease-out;
-    
-//     &:before {
-//         visibility: visible;
-//         transform: scaleX(1);
-//     }
-//   }
-// }
-
-
 .btnhover:hover{
   color:#CACF87;
   transition: all 0.2s ease-out;
 }
 
 
-.donateSection{
+.navBarSection{
   user-select: none;
   color: white;
   position: relative;
@@ -79,27 +59,31 @@
   }
 }
 
-.donateSection:hover{
+.navBarSection:hover{
   color:#CACF87;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
 
 .dropdown-menu{
-  margin-left: -4rem;
+  margin-left: -2rem;
   --bs-dropdown-min-width: 0;
   --bs-dropdown-spacer: 1rem;
   --bs-dropdown-item-padding-y: 0.4rem;
   --bs-dropdown-link-hover-bg: #B2BA61;
-    --bs-dropdown-link-active-color: #ffffff;
-    --bs-dropdown-padding-y: 0;
+  --bs-dropdown-link-active-color: #ffffff;
+  --bs-dropdown-padding-y: 0;
   border-radius:1rem;
   border: none;
   text-align: center;
+
   .dropdown-item{
+    transition: all 0.3s ease-out;
+    --bs-dropdown-link-active-bg: #8a904d;
     width: 144px;
     height: 51px;
-    line-height: 3.5rem;
+    line-height: 2.2rem;
+    font-size: 16px;
   }
   .item-t-r{
     // padding-top: 0.5rem;
@@ -112,14 +96,74 @@
     // padding-bottom: 0.5rem;
   }
 }
+
+
 .custom-member-btn{
+  --bs-btn-hover-bg: rgba(0, 0, 0, 0.506);
+  --bs-btn-hover-border-color: none;
+  --bs-btn-active-bg: rgba(0, 0, 0, 0.638);
+  --bs-btn-active-border-color: rgb(142, 142, 142);
   --bs-btn-bg: none;
   border: 0.5px white solid;
-  border-radius: 1.6rem;
-  width: 143px;
-  height: 48px;
+  border-radius: 1.3rem;
+  width: 150px;
+  height: 55px;
 }
+
 .member{
   padding-left: 68px;
   padding-right: 68px;
 }
+
+
+.HSC-custom-logo {
+  font-size: 35;
+  font-weight: bolder;
+  display: inline-block;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  
+  &:hover {
+    transform: translateY(-3px);
+    color: lighten(#B2BA61, 15%);
+    transition: all 0.4s ease-in-out 0s;
+  }
+}
+
+.pagePath{
+  height:32px;
+}
+
+.breadcrumb{
+  color:white;
+  .active{
+    color:#CACF87;
+  }
+  a{
+  //  width: 80px; //注意：如果其他分頁字數太多，要特別設標籤做自定義寬度設定
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: all 0.3s ease-out; /* 增加動畫效果 */
+  -webkit-font-smoothing: antialiased; //讓動畫有平滑效果，不要那麼銳利
+  }
+}
+
+.breadcrumb a:hover{
+  color:#dee2a9;
+  transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+  
+}
+
+
+.pageTitle{
+  color:white;
+  font-size: 3.5rem;
+  font-weight:400;
+  line-height: 67.2px;
+  letter-spacing:0.1rem;
+  padding-bottom: 35px;
+  padding-top: 10px;
+}
+
+
