@@ -3,10 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <title>領養總覽</title>
+    <title>查詢附近浪貓</title>
 </head>
 <body>
-    
+    <%- include('./layout/header'); -%>
+        
+    <div class="searchContainer nstFont bg-HSCcolor bg-opacity-50 border-HSCcolor formSet">
+        <div class="row">
+          <div class="col">
+            <label for="category" class="form-label fs-7 fw-semibold">類別</label>
+            <select id="category" class="form-select text-black-50"> 
+              <option selected>請選擇</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="location" class="form-label fs-7 fw-semibold">定點搜尋
+                <span class="fs-8 fw-normal">城市與鄉鎮</span></label>
+            <select id="location" class="form-select text-black-50">
+              <option selected>請選擇</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="range" class="form-label fs-7 fw-semibold">搜尋範圍
+                <span class="fs-8 fw-normal">以使用者為中心向外計算</span></label>
+            <input type="range" class="form-range" id="range">
+            <span>150m</span>
+          </div>
+          <div class="col">
+            <label for="features" class="form-label fs-7 fw-semibold">特徵搜尋
+                <span class="fs-8 fw-normal">花紋或顏色</span></label>
+            <select id="features" class="form-select text-black-50">
+              <option selected>請選擇</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="isSterilized" class="form-label fs-7 fw-semibold">是否節育
+                <span class="fs-8 fw-normal">簡易判斷為剪耳</span></label>
+            <select id="isSterilized" class="form-select text-black-50">
+              <option selected>請選擇</option>
+            </select>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <label for="health" class="form-label fs-7 fw-semibold">健康程度
+                  <span class="fs-8 fw-normal">包含活動力</span></label>
+              <select id="health" class="form-select text-black-50">
+                <option selected>請選擇</option>
+              </select>
+            </div>
+            <div class="col mt-3">
+              <label for="rescue" class="form-label fs-7 fw-semibold">救援等級評估
+                  <span class="fs-8 fw-normal">綜合程度表</span></label>
+              <select id="rescue" class="form-select text-black-50">
+                <option selected>請選擇</option>
+              </select>
+            </div>
+            <div class="col mt-3">
+              <p class="fs-8 fw-normal">
+                一級：些微外傷特徵，無感染狀況，健康狀況良好 <br>
+                二級：中度外傷特徵，有感染狀況，健康狀況較差 <br>
+                三級：重度外傷特徵，重度感染，嚴重的健康狀況
+              </p>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+
+      
+      
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
 </body>
 </html>
