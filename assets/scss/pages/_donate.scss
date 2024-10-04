@@ -4,65 +4,131 @@
     .formSet{
         margin-top: 64px;
         border-radius: 24px;
-        overflow: auto;
-        .donateLeft{
-            width: 648px;
-            padding: 32px;
-            .textContainer{
-                position: relative;
-                .contentResize{
-                    resize: none;
-                    height: 136px;
-                }// 設定textarea大小
-                .textCount {  
-                    position: absolute;  
-                    bottom: 12px;
-                    right: 20px;
-                    font-size: 12px;
-                    color: #989898;
-                } //固定字數顯示位置、大小，變更顏色
-            }
+        overflow: auto;     
         }
-        .donateRight{
-            width: 648px;
-            padding: 32px 32px 179px 32px;
-            .cradText{
-                color: #767E32;
-            }
-            .cardNumMg{
-                margin-right: 12px;
-            
-            }
-        } 
-     }
-     .btnContainer{
-        margin-top: 40px;
-        margin-bottom: 64px;
-        text-align: center;
-        .btnSet{
-            width: 202px;
-            height: 48px;
-            background-color: #59612A;
-            border-radius: 20px;
-        }
-        .btnCloseSet{
-            background-color: #59612A;
-            width: 80px; 
-        }
-     }
-     .attentionContent{
-        border-radius: 24px;
-        overflow: auto;
-        p{
-            padding: 32px 32px 12px 32px;
-            margin-bottom: 0;
-        }
-        .numListSet{
-            padding: 0px 32px 32px 48px;
-            margin-bottom: 0;
-        }
-     }
 }
+@media(max-width: 768px){
+    .donateContainer{
+        width: 768px;
+        padding-left: 12px;
+        padding-right: 12px;
+        .d-flex{
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-control{
+            height: 48px;
+        }
+    }
+    
+}
+@media(max-width: 576px){
+    .donateContainer{
+        width: 576px;
+    }
+}
+@media(max-width: 375px){
+    .donateContainer{
+        width: 351px;
+        .mobileMt{
+            margin-top: 0;
+        }
+        .mobileMb{
+            margin-bottom: 20px !important;
+        }
+    }
+}
+.donateLeft{
+    width: 648px;
+    padding: 32px;
+    .textContainer{
+        position: relative;
+        .contentResize{
+            resize: none;
+            height: 150px;
+        }// 設定textarea大小
+        .textCount {  
+            position: absolute;  
+            bottom: 12px;
+            right: 28px;
+            font-size: 12px;
+            color: #989898;
+        } //固定字數顯示位置、大小，變更顏色
+    }
+}
+@media(max-width: 768px){
+    .donateLeft{
+        width: 100%;  
+    }
+}
+@media(max-width: 375px){
+    .donateLeft{
+        padding: 24px 16px;  
+    }
+}
+.donateRight{
+    width: 648px;
+    padding: 32px 32px 179px 32px;
+    .cradText{
+        color: #767E32;
+    }
+    .cardNumMg{
+        margin-right: 12px;
+    }
+}
+@media(max-width: 768px){
+    .donateRight{
+        width: 100%;
+        border-left: 0 !important;
+        .d-flex{
+            flex-direction: row;
+        }
+    } 
+    .cWidth{
+        width: 156px;
+    }
+}
+@media(max-width: 576px){
+    .cWidth{
+        width: 108px;
+    } 
+}
+@media(max-width: 375px){
+    .donateRight{
+        padding: 24px 16px;
+    
+        .cWidth{
+            width: 64px;
+        } 
+    }    
+}     
+.btnContainer{
+    margin-top: 40px;
+    margin-bottom: 64px;
+    text-align: center;
+    .btnSet{
+        width: 202px;
+        height: 48px;
+        background-color: #59612A;
+        border-radius: 20px;
+    }
+    .btnCloseSet{
+        background-color: #59612A;
+        width: 80px; 
+    }
+}
+.attentionContent{
+    border-radius: 24px;
+    overflow: auto;
+    p{
+        padding: 32px 32px 12px 32px;
+        margin-bottom: 0;
+    }
+    .numListSet{
+        padding: 0px 32px 32px 48px;
+        margin-bottom: 0;
+    }
+ }
 .hideArrow::-webkit-outer-spin-button,
 .hideArrow::-webkit-inner-spin-button {
   -webkit-appearance: none;
