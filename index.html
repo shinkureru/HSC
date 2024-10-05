@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HSC流浪貓協助平台</title>
-    <script type="module" crossorigin src="/HSC/assets/main-c93a35da.js"></script>
-    <link rel="stylesheet" href="/HSC/assets/main-ac47aa17.css">
+    <script type="module" crossorigin src="/HSC/assets/main-4f279d62.js"></script>
+    <link rel="stylesheet" href="/HSC/assets/main-073c839a.css">
   </head>
   <body>
     <div class="home-navbarimage mx-auto">
@@ -223,9 +223,9 @@
         <div class="formList-title u-s-n d-flex justify-content-center">
           <span class="mx-auto">簡易通報</span>
         </div>
-        <div class="formList row nstFont">
+        <div class="formList row nstFont d-flex align-items-center justify-content-start ">
           <div class="form-side">
-            <div class="fform-side-section1">
+            <div class="form-side-section1">
               <label for="form-side-section1" class="form-side-title">區域位置</label>
               <div class="form-side-content1 d-flex" id="form-side-section1">
                 <select class="form-select" id="city-select" aria-label="Select City">
@@ -265,14 +265,52 @@
                 <textarea class="form-side-content2" maxlength="150" id="form-side-section2" placeholder="請輸入內容"></textarea>
                 <div class="char-count" id="char-count">(0/150)</div>
               </div>
-              <div class="uploadFile">
-                <label for="formFileMultiple" class="form-label"></label>
-                <input class="bottom custom-file d-flex justify-content-star" type="file" id="formFileMultiple" multiple>
-                <ul class="file-list d-flex justify-content-star" id="file-list"></ul> 
+              <div class="upload-file">
+                <input type="file" class="file-input" id="file-input" multiple hidden>
+                <button class="upload-btn" id="upload-btn">選擇檔案</button>
+                <!-- 文件列表區域 -->
+                <div class="file-list" id="file-list"><!-- 動態生成文件列表 --></div>
+                <span class="file-count" id="file-count">0/4</span><!-- 檔案計數 -->
+            </div>
+              
+            </div>
+            <div class="form-side-section3 nstFont d-flex flex-column pt-3">
+              <div class="checkbox-title form-side-title" >健康審核</div>
+              <div class="checkbox-section1 d-flex justify-content-between">
+                <div class="checkbox-group d-flex justify-content-between">
+                  <div for="checkbox" class="checkbox-section-title">1.有無晶片</div>
+                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="unknown">未知<span></span>
+                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="yes"><span>有</span>
+                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                </div>
+                <div class="checkbox-group d-flex justify-content-between">
+                  <div for="checkbox" class="checkbox-section-title">2.有無節育</div>
+                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="unknown"><span>未知</span>
+                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
+                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                </div>
+              </div>
+              <div class="checkbox-section2 d-flex justify-content-between">
+                <div class="checkbox-group d-flex justify-content-between">
+                  <div for="checkbox" class="checkbox-section-title">3.重大感染</div>
+                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>嚴重</span>
+                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
+                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                </div>
+                <div class="checkbox-group d-flex justify-content-between">
+                  <div for="checkbox" class="checkbox-section-title">4.營養狀況</div>
+                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>極差</span>
+                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="bad"><span>差</span>
+                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="good"><span>良</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="map-side"></div>
+          <div class="map-side d-flex justify-content-center">
+            <div class="custom-map " id="map-container">
+              <!-- Google 地圖會在這裡動態切換 -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
