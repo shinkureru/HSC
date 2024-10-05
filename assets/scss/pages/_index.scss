@@ -206,6 +206,7 @@
   padding-top: 9.5rem;
 }
 
+
 .formList-title{
   font-size: 2.5rem;
   line-height: 3rem;
@@ -217,7 +218,7 @@
 
 
 .form-side{
-  max-width: 39rem;
+  max-width: 725px;
 }
 
 .form-side-title{ //小標題
@@ -260,7 +261,7 @@
     -webkit-font-smoothing: antialiased; 
     position: absolute; /* 絕對定位，圖片會疊加在區塊上 */
     top: 25%; /* 垂直居中 */
-    right: 25px; /* 圖片相對輸入框右側對齊 */
+    right: 16px; /* 圖片相對輸入框右側對齊 */
     height: auto;
     z-index: 10; /* 設定圖片的層級，確保疊在區塊上方 */
     transition: transform 0.15s ease; /* 增加動畫效果 "<1.5sec" */
@@ -291,35 +292,161 @@
   bottom: 15px;
   right: 15px;
   font-size: 12px;
-  color: #888;
+  color: #989898;
 }
 
-.uploadFile{
-  position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
-  display: inline-block; /* 保持輸入框和圖片一起排列 */
-}
-
-.file-list{
-  position: absolute;
-  list-style-type: none; /* 移除預設的點符號 */
-  padding: 0;
-  & li{
-    overflow: hidden;
-    max-width: 119px;
-    max-height: 32px;
-    display: flex;
-    justify-content: space-between; /* 讓檔案名與刪除按鈕併排顯示 */
-    align-items: center;
-    margin: 5px 0;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
+.upload-file {
+  background-color: #FFFFFF;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #E0E2B4;
+  padding: 16px 20px 16px 20px;
+  border-radius: 20px;
+  & .file-input{
+    display: none;
+  }
+  & .upload-btn {
+    line-height: 14px;
+    width: 96px;
+    height: 32px;
+    font-size: 14px;
+    background-color: #59612A;
+    color: white;
+    border: none;
+    padding: 8px 20px;
     border-radius: 12px;
-    background-color: #f9f9f9;
-    & button{
-      background: none;
-      border: none;
-      color: red;
-      cursor: pointer; /* 圖片可點擊（視情況設置） */
+    cursor: pointer;
+    &:hover{
+      background-color: #494f22;
+      transition: transform 0.2s ease; /* 增加動畫效果 */
     }
+  }
+  & .file-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-left: 10px;
+    overflow-x: auto;
+  }
+}
+
+.file-item {
+  display: inline-block;           /* 讓 file-item 成為 inline 區塊元素 */
+  position: relative;    
+  padding-right: 25px;             /* 給右邊留出空間給 x 按鈕 */
+  white-space: nowrap;         /* 不換行 */
+  overflow: hidden;            /* 隱藏超出範圍的文字 */
+  text-overflow: ellipsis;     /* 顯示省略號 */
+  width: 119px;                /* 設定固定的寬度，根據需求調整 */
+  display: flex;
+  align-items: center;
+  background-color: #f3f4e6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.file-name {
+  display: inline-block;           /* 讓文件名成為 inline 區塊 */
+  white-space: nowrap;             /* 防止文字換行 */
+  overflow: hidden;                /* 隱藏超出部分 */
+  text-overflow: ellipsis;         /* 顯示省略號 */
+  vertical-align: middle;          /* 垂直置中 */
+  max-width: 85%;                 /* 填滿父元素的寬度 */
+}
+
+.remove-btn {
+  // transform: translateY(-50%); 
+  position: absolute;   
+  margin-left: 85px;
+  cursor: pointer;
+  color: #555;
+}
+
+.remove-btn:hover {
+  transition: transform 0.2s ease; /* 增加動畫效果 */
+  color: red;
+}
+
+.file-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: #989898;
+}
+
+.form-side-section3{
+  & .checkbox-section1{
+    padding-bottom: 2rem;
+  }
+  & .checkbox-group{
+    width: 300px;
+  }
+  & .checkbox-section-title{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+  }
+  & .checkbox-radio-content{
+    position: relative; /* 為了使用絕對定位 */
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: 0.8rem;
+    margin-right: 0.25rem;
+    font-weight: 400;
+    width: 1.5rem; /* 圓形的寬度 */
+    height: 1.5rem; /* 圓形的高度 */
+    appearance: none; /* 取消原有樣式 */
+    border: 2px solid #E0E2B4; /* 圓形邊框顏色 */
+    border-radius: 50%; /* 使其成為圓形 */
+    outline: none; /* 取消外框 */
+    cursor: pointer; /* 游標變為手型 */
+    transition: background-color 0.3s, border-color 0.3s; /* 添加過渡效果 */
+    &::before{
+    content: ""; /* 讓伪元素顯示 */
+    position: absolute; /* 使用絕對定位 */
+    top: 4px; /* 調整填滿顏色的上邊距 */
+    left: 4px; /* 調整填滿顏色的左邊距 */
+    width: 16px; /* 填滿顏色的寬度 */
+    height: 16px; /* 填滿顏色的高度 */
+    border-radius: 50%; /* 保持圓形 */
+    background-color: transparent; /* 初始為透明 */
+    transition: background-color 0.3s; /* 添加過渡效果 */
+    }
+    &:hover{
+      border: 2px solid #919c4e; /* 懸停時的邊框 */
+    }
+    &:checked{
+      &::before{
+        background-color: #494f22; /* 被選中時的背景顏色 */
+        border-color: #E0E2B4; /* 被選中時的邊框顏色 */
+      }
+      &:hover{
+        border-color: #E0E2B4; /* 被選中時懸停的邊框顏色 */
+      }
+    }
+  }
+}
+.map-side{
+  max-width: 530px;
+  max-height: 479px;
+  padding-left: 5rem;
+}
+
+iframe {
+  pointer-events: none;  /* 禁止所有指向事件 */
+  border: none; /* 移除邊框 */
+  outline: none;
+  width: 550px;
+  height: 489px;
+  border-radius: 1rem;
+  box-shadow: 0px 12px 12px 0px #8d8d8dcc;
+}
+
+.custom-map{
+  transition: opacity 0.5s ease; /* 設定淡入淡出效果 */
+  opacity: 1; /* 初始不透明度 */
+    & .hidden {
+      opacity: 0; /* 隱藏時的透明度 */
   }
 }
