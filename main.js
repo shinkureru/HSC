@@ -200,15 +200,27 @@ citySelect.addEventListener('change', function() {
 
 
 
-// const citySelect = document.getElementById('city-select');
-// const mapContainer = document.getElementById('map-container');
 
-// // 根據城市選擇更新地圖
-// citySelect.addEventListener('change', function() {
-//     const selectedCity = citySelect.value; // 這裡的 selectedCity 是數字或者字符串都可以
-//     if (cityMaps[selectedCity]) {  // 檢查 cityMaps 是否有對應的地圖
-//         mapContainer.innerHTML = cityMaps[selectedCity]; // 更新地圖 iframe
-//     } else {
-//         mapContainer.innerHTML = ''; // 如果沒有對應的城市，清空地圖
-//     }
-// });
+//-----------------------------表單驗證系統
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
