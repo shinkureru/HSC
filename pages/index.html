@@ -143,7 +143,7 @@
     </div>
     <div class="bg-o u-s-n">
       <div class="section-3-area container">
-        <div class="row">
+        <div class="row mx-auto d-flex justify-content-center">
               <div class="bg-data-green mx-auto column">
                   <div class="data-list nstFont d-flex flex-column align-items-center">
                     <div class="dataNumContent d-flex align-items-center mx-auto justify-content-center row">
@@ -218,16 +218,16 @@
         <div class="report-title mx-auto poppinsFont">
           Stray animal report
         </div>
-        <div class="formList-title u-s-n d-flex justify-content-center">
+        <div class="formList-title u-s-n d-flex justify-content-center" >
           <span class="mx-auto">簡易通報</span>
         </div>
-        <div class="formList row nstFont d-flex align-items-center justify-content-start ">
+        <form class="formList row nstFont d-flex align-items-center justify-content-start needs-validation" novalidate>
           <div class="form-side">
             <div class="form-side-section1">
               <label for="form-side-section1" class="form-side-title">區域位置</label>
               <div class="form-side-content1 d-flex" id="form-side-section1">
-                <select class="form-select" id="city-select" aria-label="Select City">
-                  <option selected class="align-items-center">選擇城市</option>
+                <select class="form-select" id="city-select" aria-label="Select City" required>
+                  <option value="" disabled selected>選擇城市</option>
                   <option value="1">台北市</option>
                   <option value="2">新北市</option>
                   <option value="3">桃園市</option>
@@ -248,21 +248,21 @@
                   <option value="18">台東縣</option>
                   <option value="19">花蓮縣</option>
                 </select>
-                <select class="form-select" id="district-select" aria-label="Select District">
-                  <option selected>選擇區域</option>
+                <select class="form-select" id="district-select" aria-label="Select District" required>
+                  <option value="" disabled selected>選擇區域</option>
                 </select>
-                <div class="form-search">
-                  <input class="form-control" type="text" placeholder="填入詳細地址" aria-label="default input example">
+                <div class="form-search position-relative">
+                  <input class="form-control custom-icon" type="text" placeholder="填入詳細地址" aria-label="default input example" required>
                   <img class="search-icon" src="/assets/images/icon/24px/line/search.svg" alt="search-btn">
                 </div>
               </div>
             </div>
             <div class="form-side-section2 d-flex flex-column pt-3">
               <label for="form-side-section2" class="form-side-title">現況回報</label>
-              <div class="textarea-container">
-                <textarea class="form-side-content2" maxlength="150" id="form-side-section2" placeholder="請輸入內容"></textarea>
+              <label class="textarea-container form-label">
+                <textarea class="form-side-content2 form-control" maxlength="150" id="form-side-section2" placeholder="請輸入內容" required></textarea>
                 <div class="char-count" id="char-count">(0/150)</div>
-              </div>
+              </label>
               <div class="upload-file">
                 <input type="file" class="file-input" id="file-input" multiple hidden>
                 <button class="upload-btn" id="upload-btn">選擇檔案</button>
@@ -277,29 +277,37 @@
               <div class="checkbox-section1 d-flex justify-content-between">
                 <div class="checkbox-group d-flex justify-content-between">
                   <div for="checkbox" class="checkbox-section-title">1.有無晶片</div>
-                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="unknown">未知<span></span>
-                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="yes"><span>有</span>
-                  <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  <div class="d-flex justify-content-between">
+                    <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="unknown"><span>未知</span>
+                    <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox"  value="yes"><span>有</span>
+                    <input type="radio" name="option1" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  </div>
                 </div>
                 <div class="checkbox-group d-flex justify-content-between">
                   <div for="checkbox" class="checkbox-section-title">2.有無節育</div>
-                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="unknown"><span>未知</span>
-                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
-                  <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  <div class="d-flex justify-content-between">
+                    <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="unknown"><span>未知</span>
+                    <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
+                    <input type="radio" name="option2" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  </div>
                 </div>
               </div>
               <div class="checkbox-section2 d-flex justify-content-between">
                 <div class="checkbox-group d-flex justify-content-between">
                   <div for="checkbox" class="checkbox-section-title">3.重大感染</div>
-                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>嚴重</span>
-                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
-                  <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  <div class="d-flex justify-content-between">
+                    <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>嚴重</span>
+                    <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="yes"><span>有</span>
+                    <input type="radio" name="option3" class="d-flex checkbox-radio-content" id="checkbox" value="none"><span>無</span>
+                  </div>
                 </div>
                 <div class="checkbox-group d-flex justify-content-between">
                   <div for="checkbox" class="checkbox-section-title">4.營養狀況</div>
-                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>極差</span>
-                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="bad"><span>差</span>
-                  <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="good"><span>良</span>
+                  <div class="d-flex justify-content-between">
+                    <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="terrible"><span>極差</span>
+                    <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="bad"><span>差</span>
+                    <input type="radio" name="option4" class="d-flex checkbox-radio-content" id="checkbox" value="good"><span>良</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -308,6 +316,62 @@
             <div class="custom-map " id="map-container">
               <!-- Google 地圖會在這裡動態切換 -->
             </div>
+          </div>
+          <div class="submit-btn mx-auto d-flex justify-content-center">
+            <button class="custom-btn align-items-center" type="submit"></button>
+            <span>提交表單</span>
+    
+          </div>
+        </form>
+        <div class="report-info d-flex flex-column mx-auto nstFont">
+          <div class="report-info-title">通報須知</div>
+          <div class="report-info-list d-flex justify-content-between row">
+            <div class="report-info-section d-flex flex-column align-items-center col">
+              <div class="r-i-s-header d-flex justify-content-between align-items-center">
+                <div class="r-i-s-icon poppinsFont d-flex justify-content-center align-items-center"><span>1</span></div>
+                <div class="r-i-s-title">確保安全</div>
+              </div>
+              <div class="r-i-s-content">
+                在通報前，請確認自身安全,避免被驚嚇的貓隻攻擊。如果貓隻顯得兇猛或不安，不要靠近。
+              </div>
+            </div>
+            <div class="report-info-section d-flex flex-column align-items-center col">
+              <div class="r-i-s-header d-flex justify-content-between align-items-center">
+                <div class="r-i-s-icon poppinsFont d-flex justify-content-center align-items-center">2</div>
+                <div class="r-i-s-title">拍照紀錄</div>
+              </div>
+              <div class="r-i-s-content">
+                拍攝清晰的照片，包括貓隻的全身、臉部特徵和現場環境，有助於救援人員識別和定位。
+              </div>
+            </div>
+            <div class="report-info-section d-flex flex-column align-items-center col">
+              <div class="r-i-s-header d-flex justify-content-between align-items-center">
+                <div class="r-i-s-icon poppinsFont d-flex justify-content-center align-items-center">3</div>
+                <div class="r-i-s-title">現場安置</div>
+              </div>
+              <div class="r-i-s-content">
+                如果可能,提供一些食物和水給流浪貓，並在安全的地方安置臨時庇護(如紙箱)。切勿強行移動受傷或有嚴重健康問題的貓隻。
+              </div>
+            </div>
+            <div class="report-info-section d-flex flex-column align-items-center col">
+              <div class="r-i-s-header d-flex justify-content-between align-items-center">
+                <div class="r-i-s-icon poppinsFont d-flex justify-content-center align-items-center">4</div>
+                <div class="r-i-s-title">詳細描述</div>
+              </div>
+              <div class="r-i-s-content">
+                在填寫通報表格時，提供盡可能詳細的信息,包括貓隻的顏色、大小、明顯特徵、所在位置和發現時間。
+              </div>
+            </div>
+            <div class="report-info-section d-flex flex-column align-items-center col border-r-none">
+              <div class="r-i-s-header d-flex justify-content-between align-items-center">
+                <div class="r-i-s-icon poppinsFont d-flex justify-content-center align-items-center">5</div>
+                <div class="r-i-s-title">保持耐心</div>
+              </div>
+              <div class="r-i-s-content">
+                通報後，請耐心等待浪浪的救援，若近日還持續無人救援，請再繼續通報回應。通報須知
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

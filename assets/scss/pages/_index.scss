@@ -450,3 +450,104 @@ iframe {
       opacity: 0; /* 隱藏時的透明度 */
   }
 }
+
+.was-validated .custom-icon:invalid,
+.custom-icon.is-invalid {
+    background-position: right calc(2.375em + 0.1875rem) center !important; /* 使用 !important 來覆蓋內聯樣式 */
+}
+.was-validated .custom-icon:valid,
+.custom-icon.is-valid{
+  background-position: right calc(2.375em + 0.1875rem) center !important; /* 使用 !important 來覆蓋內聯樣式 */
+}
+
+
+
+
+.submit-btn{
+  position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
+  padding-top:3rem;
+  & span{
+    pointer-events: none; /* 使文字無法攔截點擊事件 */
+    color: white;
+    position:absolute;
+    top:65px;
+  }
+  & .custom-btn{
+    line-height: 24px;
+    font-size: 1rem;
+    display: inline-block; /* 確保 transform 可以生效 */
+    background-color: #59612A;
+    width: 13.25rem;
+    height: 3rem;
+    border: none;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+    &:hover{
+      transform: scale(1.05);
+      transition: all 0.2s ease-in-out 0s; /* 增加動畫效果 */
+      background-color: #59612A;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    &:active {
+      -webkit-font-smoothing: antialiased; 
+      transform: scale(1.01);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease-in-out 0s; /* 增加動畫效果 */
+  }
+  
+  }
+
+}
+
+
+.report-info{
+  margin-top: 3rem;
+  max-width: 81rem;
+  max-height: 270px; /* 轉換成rem小數點太多 */
+  padding:2rem 2rem 2.5rem 2rem ;
+  border: 1px solid #E0E2B4;
+  border-radius: 2.5rem;
+  & .report-info-title{
+    color:#59612A;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 33.6px;
+    margin-bottom: 32px;
+  }
+  & .report-info-section{
+    max-height: 8.25rem;
+    border-right:1px solid #E0E2B4 ;
+  }
+  & .r-i-s-header{
+    margin-bottom: 1rem;
+    & .r-i-s-icon{
+      margin-right: 1rem;
+      width: 32px;
+      height: 32px;
+      background-color: #B2BA61;
+      color:white;
+      border-radius: 50%; /* 設置為圓形 */
+      gap: 5.12px;
+      font-size:18px;
+      line-height: 27px;
+      align-items: center;
+      font-weight: 600;
+    }
+    & .r-i-s-title{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color:#959E43;
+    }
+  }
+  & .r-i-s-content{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+  .report-info-list .border-r-none{  /* 讓權重高一點 */
+    border: none;  
+  }
+}
+
+
