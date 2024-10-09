@@ -8,72 +8,109 @@
 <body>
     <%- include('./layout/header'); -%>
         
-    <div class="searchContainer nstFont bg-HSCcolor bg-opacity-50 border-HSCcolor formSet">
-        <div class="row">
-          <div class="col">
-            <label for="category" class="form-label fs-7 fw-semibold">類別</label>
-            <select id="category" class="form-select text-black-50"> 
-              <option selected>請選擇</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="location" class="form-label fs-7 fw-semibold">定點搜尋
-                <span class="fs-8 fw-normal">城市與鄉鎮</span></label>
-            <select id="location" class="form-select text-black-50">
-              <option selected>請選擇</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="range" class="form-label fs-7 fw-semibold">搜尋範圍
-                <span class="fs-8 fw-normal">以使用者為中心向外計算</span></label>
-            <input type="range" class="form-range" id="range">
-            <span>150m</span>
-          </div>
-          <div class="col">
-            <label for="features" class="form-label fs-7 fw-semibold">特徵搜尋
-                <span class="fs-8 fw-normal">花紋或顏色</span></label>
-            <select id="features" class="form-select text-black-50">
-              <option selected>請選擇</option>
-            </select>
-          </div>
-          <div class="col">
-            <label for="isSterilized" class="form-label fs-7 fw-semibold">是否節育
-                <span class="fs-8 fw-normal">簡易判斷為剪耳</span></label>
-            <select id="isSterilized" class="form-select text-black-50">
-              <option selected>請選擇</option>
-            </select>
-          </div>
-          <div class="row mt-3">
-            <div class="col">
-              <label for="health" class="form-label fs-7 fw-semibold">健康程度
-                  <span class="fs-8 fw-normal">包含活動力</span></label>
-              <select id="health" class="form-select text-black-50">
-                <option selected>請選擇</option>
-              </select>
-            </div>
-            <div class="col mt-3">
-              <label for="rescue" class="form-label fs-7 fw-semibold">救援等級評估
-                  <span class="fs-8 fw-normal">綜合程度表</span></label>
-              <select id="rescue" class="form-select text-black-50">
-                <option selected>請選擇</option>
-              </select>
-            </div>
-            <div class="col mt-3">
-              <p class="fs-8 fw-normal">
-                一級：些微外傷特徵，無感染狀況，健康狀況良好 <br>
-                二級：中度外傷特徵，有感染狀況，健康狀況較差 <br>
-                三級：重度外傷特徵，重度感染，嚴重的健康狀況
-              </p>
-            </div>
+    <div class="search-container">
+      <div class="row">
+        <div class="col">
+          <label for="category" class="form-label">類別</label>
+          <select id="category" class="form-select select-sm text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="location" class="form-label">定點搜尋
+            <span class="sub-label">城市與鄉鎮</span>
+          </label>
+          <select id="location" class="form-select select-sm text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="range" class="form-label">搜尋範圍
+            <span class="sub-label">以使用者為中心向外計算</span>
+          </label>
+          <div class="d-flex mt-3">
+            <input type="range" id="range" class="form-range">
+            <span class="range-value">150m</span>
           </div>
         </div>
-        
+        <div class="col">
+          <label for="features" class="form-label">特徵搜尋
+            <span class="sub-label">花紋或顏色</span>
+          </label>
+          <select id="features" class="form-select select-sm text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="isSterilized" class="form-label">是否節育
+            <span class="sub-label">簡易判斷為剪耳</span>
+          </label>
+          <select id="isSterilized" class="form-select select-md text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <label for="health" class="form-label">健康程度
+            <span class="sub-label">包含活動力</span>
+          </label>
+          <select id="health" class="form-select select-sm text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="rescue" class="form-label">救援等級評估
+            <span class="sub-label">綜合程度表</span>
+          </label>
+          <select id="rescue" class="form-select select-lg text-black-50">
+            <option selected>請選擇</option>
+          </select>
+        </div>
+        <div class="col">
+          <p class="info-text mt-4">
+            一級：些微外傷特徵，無感染狀況，健康狀況良好<br>
+            二級：中度外傷特徵，有感染狀況，健康狀況較差<br>
+            三級：重度外傷特徵，重度感染，嚴重的健康狀況
+          </p>
+        </div>
+      </div>
     </div>
 
-
-      
-      
-
+    <div class="sort-section d-flex align-items-center justify-content-between">
+      <div class="d-flex justify-content-between w-50">
+        <div class="d-flex align-items-center">
+          <span class="me-3">篩選</span>
+          <select class="form-select me-2 sort-select" aria-label="全部類別">
+            <option selected>全部類別</option>
+            <option value="1">類別1</option>
+            <option value="2">類別2</option>
+            <option value="3">類別3</option>
+          </select>
+          <select class="form-select sort-select" aria-label="全部時間">
+            <option selected>全部時間</option>
+            <option value="1">過去一週</option>
+            <option value="2">過去一月</option>
+            <option value="3">過去一年</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center">
+          <span class="me-3">排序</span>
+          <select class="form-select sort-select" aria-label="最後發表">
+            <option selected>最後發表</option>
+            <option value="1">最新留言</option>
+            <option value="2">發佈時間</option>
+            <option value="3">回覆時間</option>
+            <option value="4">最後發表</option>
+            <option value="5">熱門</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end w-50">
+        <span class="sort-click">發布時間 | 最新留言</span>
+      </div>
+    </div>
+    
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
 </body>

@@ -224,3 +224,14 @@ citySelect.addEventListener('change', function() {
         }, false)
       })
   })()
+
+
+  //----------------------------- 領養搜尋範圍
+  document.addEventListener('DOMContentLoaded', () => {
+    const rangeInput = document.getElementById('range');
+  
+    rangeInput.addEventListener('input', function () {
+      const value = this.value;
+      this.style.background = `linear-gradient(to right, rgba(118, 126, 50, 1) ${value}%, #ffffff ${value}%)`;
+    });
+  });
