@@ -45,7 +45,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 };
 
 // 監聽第一個下拉選單的變更事件
-document.getElementById('city-select').addEventListener('change', function() {
+document.getElementById('citySelect').addEventListener('change', function() {
     const cityValue = this.value; // 取得選中的城市 value
     const districtSelect = document.getElementById('district-select');
 

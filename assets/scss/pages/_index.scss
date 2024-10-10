@@ -433,6 +433,7 @@
   padding-left: 5rem;
 }
 
+
 iframe {
   pointer-events: none;  /* 禁止所有指向事件 */
   border: none; /* 移除邊框 */
@@ -459,9 +460,6 @@ iframe {
 .custom-icon.is-valid{
   background-position: right calc(2.375em + 0.1875rem) center !important; /* 使用 !important 來覆蓋內聯樣式 */
 }
-
-
-
 
 .submit-btn{
   position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
@@ -494,11 +492,8 @@ iframe {
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       transition: transform 0.2s ease-in-out 0s; /* 增加動畫效果 */
   }
-  
   }
-
 }
-
 
 .report-info{
   margin-top: 3rem;
@@ -554,6 +549,7 @@ iframe {
 
 /* section-4-area */
 .bg-g{
+  margin-bottom: -176px;
   position: relative;
   z-index: 400; /* 設定較高的層級，疊在 bg-o 上 */
   padding:6.5rem 0 4.5rem 0;
@@ -567,7 +563,7 @@ iframe {
     &  img{
       position: absolute;
       z-index: 500; /* 設定較高的層級，疊在 bg-g 上 */
-      top: 440px; /* 調整位置 */
+      top: 430px; /* 調整位置 */
       width: 355px;
       height: auto; /* 不要讓他變形 */
     }
@@ -587,6 +583,8 @@ iframe {
         color: #3E4324;
       }
       & .adopt-p-c-pic{
+        margin-top: 10px;
+        margin-bottom: 10px;
         & img{
           width: 100%;
           height: auto;
@@ -609,12 +607,15 @@ iframe {
   }
   & .adopt-p-moreBtn{
     position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
-    padding-top:3rem;
+    padding-top:2rem;
     & span{
       pointer-events: none; /* 使文字無法攔截點擊事件 */
       color: white;
       position:absolute;
-      top:68px;
+      top:50px;
+      & .row{
+        --bs-gutter-x: 1.5rem;
+      }
     }
     & .custom-moreBtn{
       line-height: 24px;
@@ -638,6 +639,124 @@ iframe {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         transition: transform 0.2s ease-in-out 0s; /* 增加動畫效果 */
     }
+    }
+  }
+}
+
+
+.section-5-area{
+  padding-top: 88px;
+}
+.for-change-title{
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+  padding-bottom: 48px;
+  background: linear-gradient(294.62deg, #494E26 4.4%, #B2BA61 74.23%);
+  -webkit-background-clip: text; //這個屬性告訴瀏覽器將背景限制在文字內部，這樣漸變色就會應用到文字上，而不是背景上。
+  -webkit-text-fill-color: transparent; //裡將文字顏色設置為透明，這樣背景色可以透過文字顯示出來。
+}
+
+
+.f-c-c-left-side{
+  max-width: 663px;
+  color:#292929;
+  & .left-side-section-title{
+    padding-bottom: 16px;
+    font-size: 28px;
+    line-height: 33.6px;
+  }
+  & .left-side-section-content{
+    margin-bottom: -8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  & .process-flow{
+    max-height: 544px;
+    
+    & .step{
+      margin-top: 32px;
+      max-height: 112px;
+      & .step-icon{
+        margin-right: 8px;
+        background-color: #FFF7E9;
+        border-radius: 1000px;
+        max-width: 112px;
+        max-height: 112px;
+        padding: 24px;
+        & img{
+          width: 64px;
+          height: auto;
+        }
+      }
+      & .step-content{
+        padding: 16px;
+        & .step-content-title{
+          font-weight: 500;
+          font-size:20px;
+          line-height: 24px;
+        }
+        & .step-content-text{
+          font-weight: 400;
+          font-size:16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+.f-c-c-right-side{
+  max-width: 636px;
+  color:#292929;
+  background-color: #FAFAFA;
+  max-height: 786px;
+  border-radius: 2.5rem;
+  padding: 40px;
+  box-shadow: 12px 12px 16px 0px #00000014;
+  & .right-side-content{
+    margin-bottom: 70px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 556px;
+  }
+  & .right-side-pic{
+      z-index: 1;
+      position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
+    & .meeting-pic{
+      max-width: 556px;
+      height: 490px;
+      overflow: hidden; /* 超出隱藏 */
+      object-fit: cover; /* 保持比例放大並裁剪多餘部分 */
+    }
+    & .pic-up{
+      max-width: 465px;
+      position: absolute;
+      z-index: 2; /* 設定較高的層級，疊在 meeting-pic 上 */
+      top:-40px;
+      background-color:#FFFFFF ;
+      box-shadow: 0px 4px 16px 0px #00000014;
+      padding: 16px 32px 16px 32px;
+      & .data-number{
+        color: #494E26;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 48px;
+      }
+      & .data-content{
+        padding-left: 28px;
+        color: #292929;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      & .data-left{
+        border-right: 1px solid #989898;
+        padding-right: 16px;
+        margin-right: 16px;
+      }
     }
   }
 }
