@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 
 
+
   // -----------------------------定義各城市對應的鄉鎮區域資料
   const districtData = {
     "1": ["中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區", "士林區", "北投區", "內湖區", "南港區", "文山區"],
@@ -45,7 +46,26 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 };
 
 // 監聽第一個下拉選單的變更事件
-document.getElementById('citySelect').addEventListener('change', function() {
+// document.getElementById('citySelect').addEventListener('change', function() {
+//     const cityValue = this.value; // 取得選中的城市 value
+//     const districtSelect = document.getElementById('district-select');
+
+//     // 清空原本的鄉鎮區域選項
+//     districtSelect.innerHTML = '<option selected>選擇鄉鎮</option>';
+
+//     // 檢查是否有對應的鄉鎮資料
+//     if (districtData[cityValue]) {
+//         // 動態生成對應城市的鄉鎮選項
+//         districtData[cityValue].forEach(district => {
+//             const option = document.createElement('option');
+//             option.value = district;
+//             option.textContent = district;
+//             districtSelect.appendChild(option);
+//         });
+//     }
+// });
+
+document.getElementById('city-select').addEventListener('change', function() {
     const cityValue = this.value; // 取得選中的城市 value
     const districtSelect = document.getElementById('district-select');
 
@@ -182,23 +202,12 @@ const mapContainer = document.getElementById('map-container');
 // 根據城市選擇更新地圖
 citySelect.addEventListener('change', function() {
     const selectedCity = citySelect.value; // 這裡的 selectedCity 是數字或者字符串都可以
-
-    // 開始淡出
-    mapContainer.classList.add('hidden');
-
-    // 等待淡出效果完成後再更新地圖
-    setTimeout(() => {
-        if (cityMaps[selectedCity]) {  // 檢查 cityMaps 是否有對應的地圖
-            mapContainer.innerHTML = cityMaps[selectedCity]; // 更新地圖 iframe
-        } else {
-            mapContainer.innerHTML = ''; // 如果沒有對應的城市，清空地圖
-        }
-        // 淡入新的地圖
-        mapContainer.classList.remove('hidden');
-    }, 500); // 等待與 CSS 中的 transition 時間相同
+    if (cityMaps[selectedCity]) {  // 檢查 cityMaps 是否有對應的地圖
+        mapContainer.innerHTML = cityMaps[selectedCity]; // 更新地圖 iframe
+    } else {
+        mapContainer.innerHTML = ''; // 如果沒有對應的城市，清空地圖
+    }
 });
-
-
 
 
 //-----------------------------表單驗證系統
