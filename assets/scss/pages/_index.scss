@@ -481,9 +481,9 @@ iframe {
     border-radius: 20px;
     transition-duration: 0.2s;
     &:hover{
-      transform: scale(1.05);
+      // transform: scale(1.05);
       transition: all 0.2s ease-in-out 0s; /* 增加動畫效果 */
-      background-color: #59612A;
+      background-color: #41471e;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     &:active {
@@ -628,9 +628,9 @@ iframe {
       border-radius: 20px;
       transition-duration: 0.2s;
       &:hover{
-        transform: scale(1.05);
+        // transform: scale(1.05);
         transition: all 0.2s ease-in-out 0s; /* 增加動畫效果 */
-        background-color: #59612A;
+        background-color: #41471e;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
       &:active {
@@ -880,3 +880,193 @@ iframe {
   }
 
 }
+
+.product-list-moreBtn{
+  position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
+  padding-top:115px;
+  & .row{
+    --bs-gutter-x: 1.5rem;
+  }
+  & .custom-moreBtn{
+    color: white;
+    top:50px;
+    line-height: 24px;
+    font-size: 1rem;
+    display: inline-block; /* 確保 transform 可以生效 */
+    background-color: #59612A;
+    width: 13.25rem;
+    height: 3rem;     
+    border: none;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+    &:hover{
+    // transform: scale(1.05);
+    transition: all 0.2s ease-in-out 0s; /* 增加動畫效果 */
+    background-color: #41471e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+    &:active {
+    -webkit-font-smoothing: antialiased; 
+    transform: scale(1.01);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out 0s; /* 增加動畫效果 */
+   }
+  }
+  & .btn-l-icon{
+    position:absolute;
+    width: 81px;
+    height: 68px;
+    top: 102px;
+    left: 435px;
+    z-index: 3;
+  }
+  & .btn-r-icon{
+    position: relative; /* 設置父容器為相對定位，供子元素定位參考 */
+    & .story-icon-body{
+      animation: shake 2s infinite alternate; /* 持續搖晃 */
+      transform-origin: left bottom; /* 設置搖晃中心點在左下角 */
+      display: inline-block;
+      font-size: 16px;
+      z-index: 4;
+      top: -90px;
+      left: -15px;
+      position:absolute;
+      width: 88px;
+      height: 88px;
+      background-color: #B2BA61;
+      padding: 8px;
+      border-radius: 100%;
+      line-height: 24px;
+      color:white;
+      & .green-angle{
+        position: absolute;
+        bottom: -3px; /* 三角形的位置 */
+        left: 8px; /* 左右偏移量 */
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 20px solid #B2BA61; /* 使三角形顏色和氣泡一致 */
+        transform: rotate(35deg); /* 順時針旋轉 45 度 */
+      }
+    }
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.bg-footer-green{
+  background: linear-gradient(294.62deg, #494E26 4.4%, #B2BA61 74.23%);
+  max-height: 405px;
+  & .second-bg-pink{
+    background-color: #fffbf4;
+    border-radius: 0px 0px 48px 48px;
+    padding-top: 48px;
+    box-shadow: 0px 15px 15px 0px #4c52108a;
+  }
+}
+
+.HSC-title-footer{
+  padding-right: 72px;
+  border-right: 1px solid white;
+  // text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.473);
+  letter-spacing:0.02em;
+  font-size:56px;
+  color:white;
+  line-height: 56px;
+  font-weight: 600;
+  // padding-bottom: 20px;
+  .span-h{
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; /* 確保 transform 可以生效 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
+    color:#767E32;
+    &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+  }
+}
+.span-s{
+  -webkit-font-smoothing: antialiased; 
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: transform 0.2s ease; /* 增加動畫效果 */
+  color:#FFE142;
+  &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#fde155;
+  }
+}
+.span-c{
+  -webkit-font-smoothing: antialiased; 
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: transform 0.2s ease; /* 增加動畫效果 */
+  color:#767E32;
+  &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+  }
+}
+}
+.footer-area{
+  border-bottom: 1px solid white;
+  padding-top: 56px;
+  padding-bottom: 27px;
+  max-height: 357px;
+  & .company-info{
+    color: #ffffff;
+    max-width: 806px;
+    padding-left: 72px;
+     & .contactUs{
+       font-weight: 600;
+       font-size: 16px;
+       line-height: 24px;
+       padding-bottom: 24px;
+     }
+     & .info-body{
+      padding-right: 421px;
+      & .custom-icon-spacing{
+        padding-bottom: 13px;
+      }
+       & .info-content{
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 24px;
+         padding-left: 24px;
+       }
+     }
+   }
+   & .link-group{
+    & .fakeArea{
+      padding-top: 135px;
+    }
+    & .icon-spacing{
+      padding: 0px 12px 0px 12px;
+    }
+    & a{
+      -webkit-font-smoothing: antialiased; 
+      display: inline-block; /* 確保 transform 可以生效 */
+      transition: transform 0.2s ease; /* 增加動畫效果 */
+      &:hover{
+        transform: scale(1.05); /* 將 icon 放大 1.05 倍 */
+      }
+    }
+   }
+}
+.Inc{
+  padding: 12px 0px 12px 0px;
+  font-size: 14px;
+  line-height: 21px;
+  color:#FFFFFF;
+}
+
+
+
+
+
+
