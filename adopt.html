@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>查詢附近浪貓</title>
-  <script type="module" crossorigin src="/HSC/assets/main-b5cc5700.js"></script>
-  <link rel="stylesheet" href="/HSC/assets/main-df6b002f.css">
+  <script type="module" crossorigin src="/HSC/assets/main-add3038f.js"></script>
+  <link rel="stylesheet" href="/HSC/assets/main-df7f40ca.css">
 </head>
 <body>
-    
+  
 <div class="navbarimage mx-auto">
     <div class="navbar-w-100 mx-auto">
         <div>
@@ -118,15 +118,15 @@
 </div>
 
         
-    <div class="search-container">
+    <div class="container search-area">
       <div class="row">
-        <div class="col">
+        <div class="col-6 col-lg-2">
           <label for="category" class="form-label">類別</label>
           <select id="category" class="form-select select-sm text-black-50">
             <option selected>請選擇</option>
           </select>
         </div>
-        <div class="col">
+        <div class="col-6 col-lg-2">
           <label for="location" class="form-label">定點搜尋
             <span class="sub-label">城市與鄉鎮</span>
           </label>
@@ -134,7 +134,7 @@
             <option selected>請選擇</option>
           </select>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-3">
           <label for="range" class="form-label">搜尋範圍
             <span class="sub-label">以使用者為中心向外計算</span>
           </label>
@@ -143,7 +143,7 @@
             <span class="range-value">150m</span>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-2">
           <label for="features" class="form-label">特徵搜尋
             <span class="sub-label">花紋或顏色</span>
           </label>
@@ -151,7 +151,7 @@
             <option selected>請選擇</option>
           </select>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-3">
           <label for="isSterilized" class="form-label">是否節育
             <span class="sub-label">簡易判斷為剪耳</span>
           </label>
@@ -161,7 +161,7 @@
         </div>
       </div>
       <div class="row mt-4">
-        <div class="col">
+        <div class="col-12 col-lg-2">
           <label for="health" class="form-label">健康程度
             <span class="sub-label">包含活動力</span>
           </label>
@@ -169,7 +169,7 @@
             <option selected>請選擇</option>
           </select>
         </div>
-        <div class="col">
+        <div class="col-12 col-lg-3">
           <label for="rescue" class="form-label">救援等級評估
             <span class="sub-label">綜合程度表</span>
           </label>
@@ -220,7 +220,42 @@
         <span class="sort-click">發布時間 | 最新留言</span>
       </div>
     </div>
-    
+
+    <div class="cat-info-card mt-3">
+      <div class="row">
+        <div class="col-9">
+          <div class="cat-info">
+            <p class="location">台中市西屯區惠來路二段101號</p>
+            <h3 class="cat-title">國家歌劇院</h3>
+            <p class="cat-description">
+              小貓出現的地方大概在轉角路口，有時候可能會跑到馬路中間很危險，人行道的樹是牠的避難所，路過的人都會幫忙餵食物但沒有人想收養⋯
+            </p>
+            <div class="cat-tags mt-2">
+              <span class="tag">健康</span>
+              <span class="tag">未剪耳</span>
+              <span class="tag">感染程度低</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 d-flex flex-column align-items-end">
+          <div class="cat-images d-flex">
+            <img src="/HSC/assets/image2-2-2bf234b6.jpg" alt="小貓圖片1" class="cat-img me-1">
+            <img src="/HSC/assets/image (16)-6845a993.jpg" alt="小貓圖片2" class="cat-img me-1">
+            <button class="more-images">...</button>
+          </div>
+          <p class="upload-info mt-2">上傳日期：<span>2025/03/11</span><br>瀏覽次數：3442</p> 
+          <div class="mt-2 d-flex justify-content-between align-items-center">
+            <div class="cat-actions">
+              <button class="btn btn-outline-secondary me-2"><i class="fas fa-map-marker-alt"></i></button>
+              <button class="btn btn-outline-secondary me-2"><i class="fas fa-bookmark"></i> 追蹤</button>
+              <button class="btn btn-success">我要認養</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
         
 </body>
 </html>
