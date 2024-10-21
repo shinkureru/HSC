@@ -1,0 +1,14 @@
+.rescueContainer{
+    margin: 0 auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    width: 1296px;
+    user-select: none;
+    .catImg{
+        width: 464px;
+        height: 348px;
+        img{
+            max-width: 100%;
+        }
+    }
+}
