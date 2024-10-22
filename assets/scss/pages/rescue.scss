@@ -1,14 +1,136 @@
-.rescueContainer{
-    margin: 0 auto;
-    padding-top: 64px;
-    padding-bottom: 64px;
-    width: 1296px;
-    user-select: none;
-    .catImg{
-        width: 464px;
-        height: 348px;
-        img{
-            max-width: 100%;
+.upSection{
+    .upContent{
+        width: 1296px;
+        margin: 0 auto;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        .catImg{
+            width: 464px;
+            height: 348px;
+            img{
+                max-width: 100%;
+            }
         }
+    }    
+}
+.downSection{
+    background-color: #F8F8ED;
+    border-radius: 0px 0px 75px 75px;
+    box-shadow: 0px 5px 8px 0px;
+    .downContent{
+        width: 1296px;
+        margin: 0 auto;
+        padding-top: 64px;
+        padding-bottom: 64px;
+        .contentWeight{
+            width: 1051px;
+        }
+        .contentColor{
+            color: #292929;
+        }
+    }   
+}
+.progressSection{
+    width: 776px;
+    padding: 47.5px 0px 47.5px 56px;
+    .nameColor{
+        color: #767E32;
+    }
+    .target{
+        color: #525252;
+        .fundraising{
+            background-color: #F8B62D;
+            width: 74px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 12px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+    }
+    .nowMoney{
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+    .weightSet{
+        font-weight: 600;
+    }
+    .schedule{
+        color: #B2BA61;
+    }
+    .date{
+        padding-top: 12px;
+    }
+    
+    .prodressSet{
+        border-radius: 100px; //外層圓角
+        .progressbarColor{
+            background-color: #B2BA61;
+            border-radius: 100px; //內層圓角
+        }
+    }
+    .date{
+        color: #525252;
+    }
+}
+.catStory{
+    padding-top: 74px;
+    padding-bottom: 64px;
+}
+.medicalRecords{
+    .recordsImgSet{
+        width: 241.83px;
+    }
+    .imgArrow{
+        .arrowSection{
+            .arrowBorder{
+            border: 1px solid #B2BA61;
+            border-radius: 100px;
+                .arrowSet{
+                    width: 48px;
+                    height: 48px;
+                    background-color: #B2BA61;  // 設定顏色
+                    mask: url('/assets/images/icon/24px/line/arrowRight.svg') no-repeat center;
+                    -webkit-mask: url('/assets/images/icon/24px/line/arrowRight.svg') no-repeat center;
+                }
+                .arrowflip{
+                    transform: scaleX(-1); //圖片水平翻轉
+                } 
+            }
+         }
+    }
+}
+button{
+    border: none;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+    line-height: normal;
+}
+.donateBtn{
+    margin-top: 40px;
+    padding-bottom: 67px;
+    text-align: center;
+    .btnSet{
+        width: 202px;
+        height: 48px;
+        background-color: #59612A;
+        border-radius: 20px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            width: 132px;
+            background-color: #E0E2B4;
+            color: #59612A;
+        }
+    }
+    .btnCloseSet{
+        background-color: #59612A;
+        width: 80px;
+        &:hover{
+            background-color: #E0E2B4;
+            color: #59612A;
+        } 
     }
 }

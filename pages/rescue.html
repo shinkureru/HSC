@@ -8,16 +8,79 @@
 <body>
     <%- include('./layout/header'); -%>
     
-    <div class="rescueContainer">
-        <div class="upSection">
-            <div class="content">
-                <div class="catImg"><img src="/assets/images/innerPage/image (21).jpg" alt="盲貓小蝦"></div>
-                <div class="progressSection"></div>
-            </div>
-        </div>
-        <div class="downSection">
-
-        </div>
+   <div class="rescuecontainer nstFont">
+                <div class="upSection">
+                    <div class="upContent d-flex">
+                        <div class="catImg"><img src="/assets/images/innerPage/image (21).jpg" alt="盲貓小蝦"></div>
+                        <div class="progressSection">
+                            <div class="title fs-1">彰化縣北斗鎮 
+                                <span class="nameColor">盲貓小蝦</span>
+                            </div>
+                            <div class="target d-flex justify-content-between pt-5">
+                                <div class="targetMoney fs-5">目標 
+                                    <span class="poppinsFont weightSet">NT$50,000</span>
+                                </div>
+                                <div class="fundraising fs-8">募款中</div>
+                            </div>
+                            <div class="nowMoney d-flex justify-content-between align-items-center">
+                                <div class="h1 fs-1">已募得 
+                                    <span class="poppinsFont weightSet">NT$30,000</span>
+                                </div>
+                                <div class="schedule fs-4 poppinsFont weightSet">60%</div>
+                            </div>
+                            <div class="progress prodressSet">
+                                <div class="progress-bar progressbarColor" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="date fs-8">建立日期:2024-08-15</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="downSection">
+                    <div class="downContent">
+                        <div class="catStory d-flex justify-content-between ">
+                            <div class="title fs-4 text-nowrap">個案介紹</div>
+                            <div class="contentWeight contentColor">一位上班族民眾趁著午休時間去公司附近空地走走，看到了一隻貓咪正自得其樂在草叢裡玩耍，然而，當牠轉過身來，震驚地發現牠其中一顆眼睛是爆出來的狀態。因為空地緊鄰大馬路，民眾擔心小貓看不見會有危險，立刻到HSC浪貓協助網站做緊急通報，當地的志願者也迅速地趕到現場進行誘捕，帶往動物醫院做詳細檢查，並進行了右眼球摘除手術，而醫生宣告牠的左眼被眼瞼黏著，也沒有視力了。</div>
+                        </div>
+                        <div class="medicalRecords d-flex justify-content-between">
+                            <div class="title fs-4 text-nowrap">就醫紀錄及收據</div>
+                                <div class="contentWeight ">
+                                    <div class="recordsImg d-flex justify-content-between pb-3">
+                                        <img class="recordsImgSet" src="/assets/images/innerPage/未命名-3.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/assets/images/innerPage/未命名-1.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/assets/images/innerPage/未命名-2.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/assets/images/innerPage/收據.jpg" alt="小蝦">
+                                    </div>
+                                    <div class="imgArrow d-flex justify-content-end">
+                                        <button type="button" class="arrowSection pe-3"><div class="arrowBorder"><img class="arrowSet arrowflip" src="/assets/images/icon/24px/line/arrowRight.svg" alt="arrowLift"></div></button>
+                                        <button type="button" class="arrowSection"><div class="arrowBorder"><img class="arrowSet" src="/assets/images/icon/24px/line/arrowRight.svg" alt="arrowRight"></div></button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="donateBtn">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btnSet" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        我要贊助
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">系統訊息</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        頁面施工中🚧
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btnCloseSet" data-bs-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
 
 
