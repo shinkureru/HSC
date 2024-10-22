@@ -255,6 +255,7 @@
 /* 行動按鈕 */
 .cat-actions {
   gap: 8px;
+  white-space: nowrap;
 }
 
 .btn-follow {
@@ -281,6 +282,7 @@
   border-radius: 16px;
   background-color: rgba(89, 97, 42, 1);
   color: #fff;
+  margin-left: 8px;
 }
 
 .btn-adopt:hover {
@@ -312,4 +314,184 @@
 
 .pagination .page-link:hover {
   color: rgba(202, 207, 135, 1);
+}
+
+/* Modal 樣式 */
+.catInfo-modal {
+  width: 768px;
+  height: auto;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.modal-header {
+  height: 82px;
+  background-color: rgba(248, 248, 237, 1);
+  border-radius: 24px 24px 0 0;
+}
+
+.modal-title {
+  font-size: 26px;
+  font-weight: 400;
+  color: rgba(89, 97, 42, 1);
+}
+
+.modal-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-carousel-container {
+  max-width: 768px;
+  margin: 0 auto;
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+/* 左側大圖樣式 */
+.carousel-inner img {
+  width: 537px;
+  height: 427px;
+  border-radius: 24px;
+  margin-top: 8px;
+}
+
+.thumbnails-container {
+  max-width: 111px;
+  margin: 0 auto;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+/* 右側縮略圖容器樣式 */
+.carousel-thumbnails {
+  width: 111px;
+  max-height: 427px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+  scroll-behavior: smooth; /* 平滑滾動 */
+  margin-top: 4px;
+}
+
+/* 縮略圖基本樣式 */
+.thumbnail {
+  width: 111px;
+  height: 111px;
+  border-radius: 12px;
+  transition: transform 0.3s, border 0.3s;
+}
+
+/* 第一張圖片：加框線 */
+.image-with-frame {
+  border: 5px solid rgba(178, 186, 97, 1); /* 綠色框線 */
+}
+
+/* 最後一張圖片的容器：帶有疊加色塊 */
+.image-with-overlay {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 色塊的樣式 */
+.overlay {
+  position: absolute;
+  bottom: 0; /* 從底部開始 */
+  left: 0;
+  width: 100%;
+  height: 60%; 
+  background-color: rgba(149, 158, 67, 0.8); /* 半透明色塊 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG 圖示樣式 */
+.icon-svg {
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+.cat-details {
+  width: 672px;
+  margin: 0 auto;
+}
+
+.cat-details-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: rgba(41, 41, 41, 1);
+}
+
+.cat-details span {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(41, 41, 41, 1);
+}
+
+.cat-details-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(41, 41, 41, 1);
+}
+
+.separator {
+  width: 672px;
+  border: none;
+  border-top: 1px solid rgba(220, 220, 220, 1);
+  margin: 20px auto;
+}
+
+.form-label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(41, 41, 41, 1);
+}
+
+.form-check-label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(41, 41, 41, 1);
+}
+
+.form-container {
+  width: 672px;
+  margin: 0 auto;
+}
+
+.form-label, .form-check-label {
+  white-space: nowrap;
+}
+
+.adopt-btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 16px;
+  padding: 0 20px;
+  background-color: rgba(89, 97, 42, 1);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.adopt-btn:hover {
+  background-color: rgba(178, 186, 97, 1);
+  color: #fff;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
 }
