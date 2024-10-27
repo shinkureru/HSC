@@ -209,7 +209,7 @@ citySelect.addEventListener('change', function() {
     }
 });
 
-//-----------------------------固定懸浮在畫面範圍的下方
+//-----------------------------固定懸浮在畫面範圍的下方for首頁
 
 document.getElementById('back-to-top').addEventListener('click', function() {
     window.scrollTo({
@@ -217,6 +217,16 @@ document.getElementById('back-to-top').addEventListener('click', function() {
       behavior: 'smooth'  // 平滑滾動到最頂部
     });
   });
+
+//-----------------------------固定懸浮在畫面範圍的下方for分頁
+
+document.getElementById('back-to-top2').addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'  // 平滑滾動到最頂部
+    });
+  });
+
 
 
 //-----------------------------表單驗證系統

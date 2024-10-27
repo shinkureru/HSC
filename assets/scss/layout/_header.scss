@@ -396,3 +396,77 @@
     font-size: 50px !important;
   }
 }
+
+
+.backToTop{
+  position: fixed;      /* 固定在頁面上，無論滾動條怎麼移動都保持不變 */
+  bottom: 0px;         /* 距離下方 20px，可以根據需要調整 */
+  right: 20px;          /* 距離右方 20px，可以根據需要調整 */
+  cursor: pointer;      /* 鼠標移動到圖片上變成手形，表示可以點擊 */
+  width: 100px;          /* 圖片寬度設置為 50px，可以根據需要調整 */
+  height: auto;         /* 保持圖片的高度按比例變化 */
+  z-index: 1000;        /* 設定較高的層級，避免被其他元素覆蓋 */
+  & img{
+    width: 75px;
+    height: auto;
+  }
+}
+
+@media(max-width: 576px){
+  .backToTop{
+    bottom: 0px;
+    width: 25px;
+    & img{
+      width: 30px;
+      height: auto;  
+    }
+  }
+}
+
+
+
+
+
+.donatePig{
+  padding-left: 16px;
+  position: fixed;  /* 固定位置，保持圖片在頁面上的同一位置 */
+  right: 0;         /* 靠近頁面的右邊緣 */
+  top: 30%;         /* 垂直方向放置在頁面的上方 */
+  transform: translateY(-50%); /* 讓圖片居中 */
+  z-index: 1000;    /* 設置較高的層級，避免被其他元素覆蓋 */
+  background-color: #EFF0D7;
+  width: 112px;
+  height: 112px;
+  border-radius: 64px 0 0 64px;
+  & img{
+    animation: shake 2s infinite alternate; /* 持續搖晃 */
+      transform-origin: center; /* 設置搖晃中心點在左下角 */
+      display: inline-block;
+    width: 54px;
+    height: auto;
+    padding-bottom: 4px;
+  }
+  & span{
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+  }
+}
+
+
+@media(max-width: 576px){
+  .donatePig{
+    width: 75px;
+    height: 75px;
+    & span{
+      font-size: 11px !important;
+      line-height: 15px;
+    }
+  }
+  .pig-image{
+    width: 30px !important;      /* 設定圖片的寬度 */
+    height: auto !important;     /* 高度根據寬度等比例變化 */
+    cursor: pointer;  /* 滑鼠指針變為手形，提示圖片可以點擊 */
+  }
+  
+}
