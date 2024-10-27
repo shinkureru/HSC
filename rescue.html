@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>救援個案募款</title>
-  <script type="module" crossorigin src="/HSC/assets/main-b4a1f1e0.js"></script>
-  <link rel="stylesheet" href="/HSC/assets/main-e25a30e1.css">
+  <script type="module" crossorigin src="/HSC/assets/main-b4684cd7.js"></script>
+  <link rel="stylesheet" href="/HSC/assets/main-3d983032.css">
 </head>
 <body>
     
 <div class="navbarimage mx-auto">
     <div class="navbar-w-100 mx-auto">
-        <div>
-            <div >
-                <div class="d-flex align-items-center h-100-custom">
+       <div class="custom-navber d-flex align-items-center h-100-custom">
+          <!-- HSC-home-logo -->
+          <div class="homeLogo text-light p-5 fs-1 font-weight-bold me-auto"><a href="index.html" class="HSC-custom-logo">HSC</a></div>
     
-                    <!-- HSC-home-logo -->
-                    <div class="homeLogo text-light p-5 fs-1 font-weight-bold me-auto"><a href="index.html" class="HSC-custom-logo">HSC</a></div>
-    
-                    <!-- navbarSection -->
-                    <div class="navbar d-flex justify-content-between nstFont fs-9">
-                        <div class="firstPageSection px-4">
+           <!-- navbarSection -->
+            <div class="navbar d-flex justify-content-between nstFont fs-9">
+            <div class="firstPageSection px-4">
                             <div class="dropdown">
                                 <div class="navBarSection" data-bs-toggle="dropdown">
                                     浪貓領養
@@ -32,8 +29,8 @@
                                   <li><a class="dropdown-item item-b-r" href="adopt.html">查詢附近浪貓</a></li>
                                 </ul>
                               </div>
-                        </div>
-                        <div class="secondPageSection px-4">
+            </div>
+            <div class="secondPageSection px-4">
                             <div class="dropdown">
                                 <div class="navBarSection" data-bs-toggle="dropdown">
                                     愛心樂捐
@@ -43,8 +40,8 @@
                                   <li><a class="dropdown-item item-b-r" href="#">支持浪貓單位</a></li>
                                 </ul>
                               </div>
-                        </div>
-                        <div class="thirdPageSection px-4">
+            </div>
+            <div class="thirdPageSection px-4">
                             <div class="dropdown">
                                 <div class="navBarSection" data-bs-toggle="dropdown">
                                     浪貓知識
@@ -54,8 +51,8 @@
                                   <li><a class="dropdown-item item-b-r" href="#">愛護守則列表</a></li>
                                 </ul>
                               </div>
-                        </div>
-                        <div class="fourthPageSection ps-4">
+            </div>
+            <div class="fourthPageSection px-4">
                             <div class="dropdown">
                                 <div class="navBarSection" data-bs-toggle="dropdown">
                                     緊急通報
@@ -66,38 +63,168 @@
                                   <li><a class="dropdown-item item-b-r" href="#">中途安置</a></li>
                                 </ul>
                               </div>
-                        </div>
-                    </div>
-    
-                    <!-- memberSignIn/SignOut -->
-                    <div class="member">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="d-flex align-items-center justify-content-center btn btn-primary custom-member-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <div class="memberSvg "><img src="/HSC/assets/ueser-a67058d7.svg" alt=""></div>
-                            <div class="memberText nstFont fs-9 ps-1">登入/註冊</div>
-                          </button>
-                          <!-- Modal -->
-                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  ...
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
+             </div>
             </div>
-        </div>
+            
+            <!-- @media(max-width: 768px) -->
+            <div class="md-member u-s-n">
+             <!-- Button trigger modal -->
+             <button type="button" data-bs-toggle="modal" data-bs-target="#md-exampleModal">
+              <div class="md-member-img"><img src="/HSC/assets/ueser-a67058d7.svg" alt=""></div>
+            </button>
+             <!-- Modal -->
+             <div class="modal fade" id="md-exampleModal" tabindex="-1" aria-labelledby="md-exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="md-exampleModalLabel">會員登入</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class=" needs-validation" novalidate>
+                      <div class="account d-flex justify-content-between align-items-center">
+                        <label for="md-validationCustom01" class="form-label">帳號</label>
+                        <input type="text" class="form-control" id="md-validationCustom01" placeholder="請填入帳號" required>
+                        <div class="valid-feedback"></div>
+                      </div>
+                      <div class="password d-flex justify-content-between align-items-center">
+                        <label for="md-validationCustom02" class="form-label">密碼</label>
+                        <input type="text" class="form-control" id="md-validationCustom02" placeholder="請填入密碼" required>
+                        <div class="valid-feedback"></div>
+                      </div>
+                      <div class="checkbox d-flex justify-content-start align-items-center">
+                        <input type="checkbox" class="custom-checkbox" id="remember">
+                        <label for="remember" class="remember-text">記住登入資訊一個月</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer d-flex align-items-center">
+                    <a class="forget-password me-auto" href="javascript:void(0)">忘記密碼</a>
+                    <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-primary save-btn">送出</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="md-side-navbar" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="/HSC/assets/memember-7675abbe.svg" alt=""></button> 
+          <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 id="offcanvasRightLabel"></h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- ffcanvas-body -->
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      領養浪貓
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul class="d-flex flex-column align-items-center">
+                        <li><a href="#">代保管領養</a></li>
+                        <li><a href="#">登記須領養</a></li>
+                        <li><a href="#">查看已領養</a></li>
+                        <li><a href="adopt.html">查詢附近浪貓</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      愛心樂捐
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul class="d-flex flex-column align-items-center">
+                        <li><a href="donate.html">支持創作者</a></li>
+                        <li><a href="#">支持浪貓單位</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      浪貓知識
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul class="d-flex flex-column align-items-center">
+                        <li><a href="#">野外守則列表</a></li>
+                        <li><a href="#">愛護守則列表</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      緊急通報
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul class="d-flex flex-column align-items-center">
+                        <li><a href="#">遺失協尋</a></li>
+                        <li><a href="#">協助醫療</a></li>
+                        <li><a href="#">中途安置</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ffcanvas-body -->
+            </div>
+          </div>
+             
+             <!-- memberSignIn/SignOut -->
+             <div class="member u-s-n">
+              <button type="button" class="d-flex align-items-center justify-content-center btn btn-primary custom-member-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <div class="memberSvg "><img src="/HSC/assets/ueser-a67058d7.svg" alt=""></div>
+                <div class="memberText nstFont fs-9 ps-1">登入/註冊</div>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">會員登入</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="account d-flex justify-content-between align-items-center">
+                        <label for="validationCustom01" class="form-label">帳號</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="請填入帳號" required>
+                        <div class="valid-feedback"></div>
+                      </div>
+                      <div class="password d-flex justify-content-between align-items-center">
+                        <label for="validationCustom02" class="form-label">密碼</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="請填入密碼" required>
+                        <div class="valid-feedback"></div>
+                      </div>
+                      <div class="checkbox d-flex justify-content-start align-items-center">
+                        <input type="checkbox" class="custom-checkbox" id="pc-remember">
+                        <label for="pc-remember" class="remember-text">記住登入資訊一個月</label>
+                      </div>
+                    </div>
+                    <div class="modal-footer d-flex align-items-center">
+                      <a class="forget-password me-auto" href="javascript:void(0)">忘記密碼</a>
+                      <button type="button" class="btn btn-secondary cancel-btn" data-bs-dismiss="modal">關閉</button>
+                      <button type="button" class="btn btn-primary save-btn">送出</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+       </div>
     </div>
     <div class="container">
         <div class="row">
@@ -106,34 +233,151 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">HSC首頁</a></li>
-                          <li class="breadcrumb-item"><a href="index.html">愛心樂捐</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">捐款資料填寫</li>
+                          <li class="breadcrumb-item"><a href="index.html">緊急救援</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">協助醫療</li>
                         </ol>
                       </nav>
                 </div>
-                <h1 class="pageTitle">捐款資料填寫</h1>
+                <h1 class="pageTitle">協助醫療</h1>
             </div>
         </div>
+    </div>
+    <div class="section-8-area backToTop u-s-n">
+      <img src="/HSC/assets/Frame-b9be1257.png" alt="Back to top" id="back-to-top2">
+    </div>
+    <div class="section-9-area donatePig u-s-n d-flex align-items-center justify-content-center">
+      <a href="donate.html" target="_blank" class="pig-image-link d-flex flex-column justify-content-center align-items-center">
+        <img src="/HSC/assets/Objects-6e9ebf85.svg" alt="Click to visit" class="pig-image">
+        <span>贊助浪貓</span>
+      </a>
     </div>
 </div>
 
     
-    <div class="rescueContainer">
-        <div class="upSection">
-            <div class="content">
-                <div class="catImg"><img src="/HSC/assets/image (21)-9258e2f2.jpg" alt="盲貓小蝦"></div>
-                <div class="progressSection"></div>
-            </div>
-        </div>
-        <div class="downSection">
-
-        </div>
+   <div class="rescuecontainer nstFont">
+                <div class="upSection">
+                    <div class="upContent d-flex">
+                        <div class="catImg"><img src="/HSC/assets/image (21)-9258e2f2.jpg" alt="盲貓小蝦"></div>
+                        <div class="progressSection">
+                            <div class="title fs-1">彰化縣北斗鎮 
+                                <span class="nameColor">盲貓小蝦</span>
+                            </div>
+                            <div class="target d-flex justify-content-between pt-5">
+                                <div class="targetMoney fs-5">目標 
+                                    <span class="poppinsFont weightSet">NT$50,000</span>
+                                </div>
+                                <div class="fundraising fs-8">募款中</div>
+                            </div>
+                            <div class="nowMoney d-flex justify-content-between align-items-center">
+                                <div class="h1 fs-1">已募得 
+                                    <span class="poppinsFont weightSet">NT$30,000</span>
+                                </div>
+                                <div class="schedule fs-4 poppinsFont weightSet">60%</div>
+                            </div>
+                            <div class="progress prodressSet">
+                                <div class="progress-bar progressbarColor" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="date fs-8">建立日期:2024-08-15</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="downSection">
+                    <div class="downContent">
+                        <div class="catStory d-flex justify-content-between ">
+                            <div class="title fs-4 text-nowrap">個案介紹</div>
+                            <div class="contentWeight contentColor">一位上班族民眾趁著午休時間去公司附近空地走走，看到了一隻貓咪正自得其樂在草叢裡玩耍，然而，當牠轉過身來，震驚地發現牠其中一顆眼睛是爆出來的狀態。因為空地緊鄰大馬路，民眾擔心小貓看不見會有危險，立刻到HSC浪貓協助網站做緊急通報，當地的志願者也迅速地趕到現場進行誘捕，帶往動物醫院做詳細檢查，並進行了右眼球摘除手術，而醫生宣告牠的左眼被眼瞼黏著，也沒有視力了。</div>
+                        </div>
+                        <div class="medicalRecords d-flex justify-content-between">
+                            <div class="title fs-4 text-nowrap">就醫紀錄及收據</div>
+                                <div class="contentWeight ">
+                                    <div class="recordsImg d-flex justify-content-between pb-3">
+                                        <img class="recordsImgSet" src="/HSC/assets/未命名-3-7b7c654e.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/HSC/assets/未命名-1-5d0bb650.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/HSC/assets/未命名-2-1a001b97.jpg" alt="小蝦">
+                                        <img class="recordsImgSet" src="/HSC/assets/收據-2e276c98.jpg" alt="小蝦">
+                                    </div>
+                                    <div class="imgArrow d-flex justify-content-end">
+                                        <button type="button" class="arrowSection pe-3"><div class="arrowBorder"><img class="arrowSet arrowflip" src="/HSC/assets/arrowRight-82e5cd9b.svg" alt="arrowLift"></div></button>
+                                        <button type="button" class="arrowSection"><div class="arrowBorder"><img class="arrowSet" src="/HSC/assets/arrowRight-82e5cd9b.svg" alt="arrowRight"></div></button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="donateBtn">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btnSet" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        我要贊助
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">系統訊息</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        頁面施工中🚧
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btnCloseSet" data-bs-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
 
 
 
 
 
-        
+    <div class="section-7-area bg-footer-green u-s-n">
+    <div class="3-1 second-bg-pink"></div>
+    <div class="3-2 container">
+      <div class="footer-area d-flex align-items-center">
+        <div class="big-logo">
+          <div class="big-logo-size poppinsFont">  
+            <div class="HSC-title-footer">
+             <div class="H-part"><span  class="span-h">H</span>elp</div>
+             <div class="S-part"><span class="span-s">S</span>tray</div>
+             <div class="C-part"><span  class="span-c">C</span>ats</div>
+            </div>
+         </div>
+        </div>
+        <div class="company-info d-flex flex-column justify-content-start nstFont">
+          <div class="contactUs">聯絡我們</div>
+          <div class="info-body d-flex flex-column">
+            <div class="email custom-icon-spacing d-flex justify-content-start align-items-center">
+              <div class="info-icon"><img src="/HSC/assets/mail-e3cda054.svg" alt=""></div>
+              <div class="info-content">helpstraycats@gmail.com</div>
+            </div>
+            <div class="phone custom-icon-spacing d-flex justify-content-start align-items-center">
+              <div class="info-icon"><img src="/HSC/assets/phone-74bba589.svg" alt=""></div>
+              <div class="info-content"> 04-25730981</div>
+            </div>
+            <div class="location custom-icon-spacing d-flex justify-content-start align-items-center">
+              <div class="info-icon"><img src="/HSC/assets/location-7ac8c078.svg" alt=""></div>
+              <div class="info-content">407 台中市西屯區臺灣大道三段301號</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="link-group d-flex flex-column ms-auto">
+          <div class="fakeArea"></div>
+          <div class="link-group d-flex justify-content-end">
+            <a href="#" class="facebookIcon icon-spacing"><img src="/HSC/assets/fb-6193c002.svg" alt="facebookLink"></a>
+            <a href="#" class="youtubeIcon icon-spacing"><img src="/HSC/assets/yt-4df814ba.svg" alt="youtubeLink"></a>
+            <a href="#" class="insIcon icon-spacing"><img src="/HSC/assets/ig-107a4429.svg" alt="instagramLink"></a>
+            <a href="#" class="lineIcon icon-spacing"><img src="/HSC/assets/line-6f63dd9a.svg" alt="lineLink"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="3-3 container">
+      <div class="Inc poppinsFont">© 2024 Help Stray Cats Technologies Inc.</div>
+    </div>
+  </div>    
 </body>
 </html>
