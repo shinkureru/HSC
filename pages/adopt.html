@@ -157,7 +157,7 @@
   </div>
 
   <!-- 排序 -->
-  <div class="sort-section d-flex align-items-center justify-content-between">
+  <div class="sort-section d-flex align-items-center row justify-content-between">
       <div class="d-flex justify-content-between w-50">
         <div class="d-flex align-items-center">
           <span class="me-3">篩選</span>
@@ -436,7 +436,7 @@
       <!-- Modal Header -->
       <div class="modal-header">
         <h5 class="modal-title ms-2" id="catInfoModalLabel">貓咪資訊</h5>
-        <button type="button" class="btn-close modal-close-button me-2" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close modal-close-button me-2 align-items-center" data-bs-dismiss="modal" aria-label="Close">
           <img src="/assets/images/icon/24px/line/close.svg" alt="Close">
         </button>
         
@@ -499,41 +499,41 @@
       <h6 class="cat-details-title">健康審核</h6>
       <form>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">1. 有無晶片</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="chip" id="chip-unknown">
-            <label class="form-check-label" for="chip-unknown">未知</label>
+          <label class="form-label me-2 d-flex align-items-end">1. 有無晶片</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-unknown">
+            <label class="form-check-label me-4" for="chip-unknown">未知</label>
 
-            <input type="radio" class="form-check-input" name="chip" id="chip-yes">
-            <label class="form-check-label" for="chip-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-yes">
+            <label class="form-check-label me-4" for="chip-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="chip" id="chip-no">
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-no">
             <label class="form-check-label" for="chip-no">無</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">2. 有無節育</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-unknown">
-            <label class="form-check-label" for="neutered-unknown">未知</label>
+          <label class="form-label me-2 d-flex align-items-end">2. 有無節育</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-unknown">
+            <label class="form-check-label me-4" for="neutered-unknown">未知</label>
 
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-yes">
-            <label class="form-check-label" for="neutered-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-yes">
+            <label class="form-check-label me-4" for="neutered-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-no">
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-no">
             <label class="form-check-label" for="neutered-no">無</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">3. 重大感染</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="infection" id="infection-severe">
-            <label class="form-check-label" for="infection-severe">嚴重</label>
+          <label class="form-label me-2 d-flex align-items-end">3. 重大感染</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-severe">
+            <label class="form-check-label me-4" for="infection-severe">嚴重</label>
 
-            <input type="radio" class="form-check-input" name="infection" id="infection-yes">
-            <label class="form-check-label" for="infection-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-yes">
+            <label class="form-check-label me-4" for="infection-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="infection" id="infection-no">
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-no">
             <label class="form-check-label" for="infection-no">無</label>
           </div>
         </div>
@@ -545,41 +545,41 @@
       <h6 class="cat-details-title">其餘提供</h6>
       <form>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">1. 食物提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="food" id="food-little">
-            <label class="form-check-label" for="food-little">少量</label>
+          <label class="form-label me-2 d-flex align-items-end">1. 食物提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-little">
+            <label class="form-check-label me-4" for="food-little">少量</label>
 
-            <input type="radio" class="form-check-input" name="food" id="food-medium">
-            <label class="form-check-label" for="food-medium">中</label>
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-medium">
+            <label class="form-check-label modal-check-label" for="food-medium">中</label>
 
-            <input type="radio" class="form-check-input" name="food" id="food-much">
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-much">
             <label class="form-check-label" for="food-much">多</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">2. 保暖提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="warm" id="warm-little">
-            <label class="form-check-label" for="warm-little">少量</label>
+          <label class="form-label me-2 d-flex align-items-end">2. 保暖提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-little">
+            <label class="form-check-label me-4" for="warm-little">少量</label>
 
-            <input type="radio" class="form-check-input" name="warm" id="warm-medium">
-            <label class="form-check-label" for="warm-medium">中</label>
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-medium">
+            <label class="form-check-label modal-check-label" for="warm-medium">中</label>
 
-            <input type="radio" class="form-check-input" name="warm" id="warm-much">
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-much">
             <label class="form-check-label" for="warm-much">多</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">3. 避難提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-box">
-            <label class="form-check-label" for="shelter-box">紙箱</label>
+          <label class="form-label me-2 d-flex align-items-end">3. 避難提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-box">
+            <label class="form-check-label me-4" for="shelter-box">紙箱</label>
 
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-plastic">
-            <label class="form-check-label" for="shelter-plastic">塑膠</label>
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-plastic">
+            <label class="form-check-label me-4" for="shelter-plastic">塑膠</label>
 
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-other">
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-other">
             <label class="form-check-label" for="shelter-other">其他</label>
           </div>
         </div>

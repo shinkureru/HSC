@@ -346,6 +346,7 @@
   max-width: 768px;
   margin: 0 auto;
   margin-left: 20px;
+  margin-right: 24px;
   flex-grow: 1;
 }
 
@@ -373,6 +374,7 @@
   padding-right: 5px;
   scroll-behavior: smooth; /* 平滑滾動 */
   margin-top: 4px;
+  cursor: pointer;
 }
 
 /* 縮略圖基本樣式 */
@@ -384,9 +386,9 @@
 }
 
 /* 第一張圖片：加框線 */
-.image-with-frame {
-  border: 5px solid rgba(178, 186, 97, 1); /* 綠色框線 */
-}
+// .image-with-frame {
+//   border: 5px solid rgba(178, 186, 97, 1); /* 綠色框線 */
+// }
 
 /* 最後一張圖片的容器：帶有疊加色塊 */
 .image-with-overlay {
@@ -490,6 +492,41 @@
 
 .modal-header {
   border-bottom: none;
+}
+
+.adopt-form-check-input {
+  width: 24px;
+  height: 24px;
+  border-radius: 200px;
+  border: 1.5px solid rgba(224, 226, 180, 1);
+  appearance: none;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.adopt-form-check-input:checked {
+  border: 1.5px solid rgba(178, 186, 97, 1);
+}
+
+.adopt-form-check-input:checked::before {
+  content: "";
+  width: 9.6px;
+  height: 9.6px;
+  background-color: rgba(178, 186, 97, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 7.2px;
+  left: 7.2px;
+}
+
+.form-label {
+  font-family: monospace;
+}
+
+.modal-check-label {
+margin-right: 40px;
 }
 
 .modal-footer {
