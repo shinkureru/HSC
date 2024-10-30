@@ -1,8 +1,11 @@
+body{
+    background-image: linear-gradient(#FFF, #F8F8ED);
+    user-select: none;
+}
 .donateContainer{
     margin: 0 auto;
     width: 1296px;
-    user-select: none;
-    .formSet{
+    .formSet{ 
         margin-top: 64px;
         border-radius: 24px;
         overflow: auto;     
@@ -40,6 +43,7 @@
     }
 }
 .donateLeft{
+    background-color: #FFF;
     width: 648px;
     padding: 32px;
     .textContainer{
