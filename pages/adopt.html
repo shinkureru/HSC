@@ -7,12 +7,12 @@
 </head>
 <body>
 
-  <%- include('./layout/header', { pageTitle: '查詢附近浪貓', breadcrumbTitle: '浪貓領養' }); -%>
 
+ <%- include('./layout/header', { pageTitle: '查詢附近浪貓', breadcrumbTitle: '浪貓領養' }); -%>
         
   <!-- 搜尋 -->
   <div class="container search-area mt-5">
-    <div class="row">
+    <div class="row g-3 g-lg-3 search-area-mb search-area-mt">
       <!-- 類別搜尋 -->
       <div class="col-6 col-lg-2">
         <label for="category" class="form-label">類別</label>
@@ -27,8 +27,8 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="categoryDropdown">
-            <li><a class="dropdown-item" href="#">米克斯</a></li>
-            <li><a class="dropdown-item" href="#">品種貓</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">米克斯</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">品種貓</a></li>
           </ul>
         </div>
       </div>
@@ -47,9 +47,9 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="ms-2 dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="locationDropdown">
-            <li><a class="dropdown-item" href="#">北部</a></li>
-            <li><a class="dropdown-item" href="#">中部</a></li>
-            <li><a class="dropdown-item" href="#">南部</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">北部</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">中部</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">南部</a></li>
           </ul>
         </div>
       </div>
@@ -57,8 +57,8 @@
       <!-- 搜尋範圍 -->
       <div class="col-12 col-lg-3">
         <label for="range" class="form-label">搜尋範圍 <span class="sub-label">以使用者為中心向外計算</span></label>
-        <div class="d-flex align-items-center mt-3">
-          <input type="range" id="range" class="form-range">
+        <div class="d-flex align-items-center form-range-mt">
+          <input type="range" id="range" class="form-range flex-grow-1">
           <span class="range-value ms-2">150m</span>
         </div>
       </div>
@@ -77,15 +77,15 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="ms-2 dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="featuresDropdown">
-            <li><a class="dropdown-item" href="#">橘貓</a></li>
-            <li><a class="dropdown-item" href="#">乳牛貓</a></li>
-            <li><a class="dropdown-item" href="#">虎斑貓</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">橘貓</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">乳牛貓</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">虎斑貓</a></li>
           </ul>
         </div>
       </div>
   
       <!-- 是否節育 -->
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-3 mb-3 mb-lg-0">
         <label for="isSterilized" class="form-label">是否節育 <span class="sub-label">簡易判斷為剪耳</span></label>
         <div class="dropdown">
           <button 
@@ -98,14 +98,14 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="ms-2 dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="isSterilizedDropdown">
-            <li><a class="dropdown-item" href="#">有剪耳(已結紮)</a></li>
-            <li><a class="dropdown-item" href="#">無剪耳(未結紮)</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">有剪耳(已結紮)</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">無剪耳(未結紮)</a></li>
           </ul>
         </div>
       </div>
     </div>
   
-    <div class="row mt-4">
+    <div class="row g-3 g-lg-3">
       <!-- 健康程度 -->
       <div class="col-12 col-lg-2">
         <label for="health" class="form-label">健康程度 <span class="sub-label">包含活動力</span></label>
@@ -120,8 +120,8 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="ms-2 dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="healthDropdown">
-            <li><a class="dropdown-item" href="#">活動力佳</a></li>
-            <li><a class="dropdown-item" href="#">活動力弱</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">活動力佳</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">活動力弱</a></li>
           </ul>
         </div>
       </div>
@@ -140,15 +140,15 @@
             <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="ms-2 dropdown-arrow">
           </button>
           <ul class="dropdown-menu search-dropdown-menu" aria-labelledby="rescueDropdown">
-            <li><a class="dropdown-item" href="#">一級：無需救援，狀況良好</a></li>
-            <li><a class="dropdown-item" href="#">二級：需密切觀察或適時援助</a></li>
-            <li><a class="dropdown-item" href="#">三級：需立即採取救授行動</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">一級：無需救援，狀況良好</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">二級：需密切觀察或適時援助</a></li>
+            <li class="d-flex align-items-center justify-content-center"><a class="dropdown-item" href="#">三級：需立即採取救授行動</a></li>
           </ul>
         </div>
       </div>
   
       <div class="col">
-        <p class="info-text mt-4">
+        <p class="info-text info-text-mt">
           一級：些微外傷特徵，無感染狀況，健康狀況良好<br>
           二級：中度外傷特徵，有感染狀況，健康狀況較差<br>
           三級：重度外傷特徵，重度感染，嚴重的健康狀況
@@ -157,98 +157,106 @@
     </div>
   </div>
 
-  <!-- 排序 -->
-  <div class="sort-section d-flex align-items-center justify-content-between">
-      <div class="d-flex justify-content-between w-50">
-        <div class="d-flex align-items-center">
-          <span class="me-3">篩選</span>
-    
-          <!-- 類別下拉選單 -->
-          <div class="dropdown me-2">
-            <button class="sort-dropdown-btn" type="button" 
-                    id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              全部類別
-              <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
-            </button>
-            <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="categoryDropdown">
-              <li><a class="dropdown-item" href="#">全部類別</a></li>
-              <li><a class="dropdown-item" href="#">米克斯</a></li>
-              <li><a class="dropdown-item" href="#">品種貓</a></li>
-            </ul>
-          </div>
-    
-          <!-- 時間下拉選單 -->
-          <div class="dropdown">
-            <button class="sort-dropdown-btn" type="button" 
-                    id="timeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              全部時間
-              <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
-            </button>
-            <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="timeDropdown">
-              <li><a class="dropdown-item" href="#">全部時間</a></li>
-              <li><a class="dropdown-item" href="#">過去一週</a></li>
-              <li><a class="dropdown-item" href="#">過去一月</a></li>
-              <li><a class="dropdown-item" href="#">過去一年</a></li>
-            </ul>
-          </div>
+  <!-- 排序區塊 -->
+<div class="container sort-section row">
+  <!-- 左側篩選與排序 + 右側發布時間 | 最新留言 -->
+  <div class="col-12 d-flex flex-wrap flex-lg-nowrap align-items-center justify-content-between">
+    <!-- 篩選與排序 -->
+    <div class="d-flex flex-wrap flex-lg-nowrap align-items-center">
+      <div class="d-flex align-items-center mb-2 mb-lg-0 me-3">
+        <span class="me-3">篩選</span>
+
+        <!-- 類別下拉選單 -->
+        <div class="dropdown me-2">
+          <button class="sort-dropdown-btn" type="button" 
+                  id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            全部類別
+            <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
+          </button>
+          <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="categoryDropdown">
+            <li><a class="dropdown-item" href="#">全部類別</a></li>
+            <li><a class="dropdown-item" href="#">米克斯</a></li>
+            <li><a class="dropdown-item" href="#">品種貓</a></li>
+          </ul>
         </div>
-    
-        <!-- 排序下拉選單 -->
-        <div class="d-flex align-items-center">
-          <span class="me-3">排序</span>
-    
-          <div class="dropdown">
-            <button class="sort-dropdown-btn" type="button" 
-                    id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-              最後發表
-              <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
-            </button>
-            <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="sortDropdown">
-              <li><a class="dropdown-item" href="#">最後發表</a></li>
-              <li><a class="dropdown-item" href="#">最新留言</a></li>
-              <li><a class="dropdown-item" href="#">發佈時間</a></li>
-              <li><a class="dropdown-item" href="#">回覆時間</a></li>
-              <li><a class="dropdown-item" href="#">熱門</a></li>
-            </ul>
-          </div>
+
+        <!-- 時間下拉選單 -->
+        <div class="dropdown">
+          <button class="sort-dropdown-btn" type="button" 
+                  id="timeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            全部時間
+            <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
+          </button>
+          <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="timeDropdown">
+            <li><a class="dropdown-item" href="#">全部時間</a></li>
+            <li><a class="dropdown-item" href="#">過去一週</a></li>
+            <li><a class="dropdown-item" href="#">過去一月</a></li>
+            <li><a class="dropdown-item" href="#">過去一年</a></li>
+          </ul>
         </div>
       </div>
-    
-      <div class="d-flex justify-content-end w-50">
-        <span class="sort-click">發布時間 | 最新留言</span>
+
+      <!-- 排序下拉選單 -->
+      <div class="d-flex align-items-center">
+        <span class="me-3 ms-lg-5">排序</span>
+
+        <div class="dropdown">
+          <button class="sort-dropdown-btn" type="button" 
+                  id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            最後發表
+            <img src="/assets/images/icon/24px/line/arrowDownS.svg" alt="arrow" class="dropdown-arrow">
+          </button>
+          <ul class="dropdown-menu sort-dropdown-menu" aria-labelledby="sortDropdown">
+            <li><a class="dropdown-item" href="#">最後發表</a></li>
+            <li><a class="dropdown-item" href="#">最新留言</a></li>
+            <li><a class="dropdown-item" href="#">發佈時間</a></li>
+            <li><a class="dropdown-item" href="#">回覆時間</a></li>
+            <li><a class="dropdown-item" href="#">熱門</a></li>
+          </ul>
+        </div>
       </div>
-  </div>   
+    </div>
+
+    <!-- 發布時間 | 最新留言 -->
+    <div class="sort-click">
+      <span>發布時間 | 最新留言</span>
+    </div>
+  </div>
+</div>
 
   <!-- 貓咪資訊-1 -->
-  <div class="cat-info-card mt-3">
+  <div class="cat-info-card mt-3 container-fluid">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
           <div class="cat-info">
             <p class="location">高雄市旗津區旗津路</p>
             <h3 class="cat-title">旗津踩風大道</h3>
             <p class="cat-description">
               下雨的時候小貓沒有地方可以避雨，淋濕的浪貓很容易跑到路上，非常危險，善心人士有將一些食物放置在誘捕籠旁，但還是沒有辦法誘捕到⋯
             </p>
-            <div class="cat-tags mt-3">
+            <div class="cat-tags mt-2 mt-lg-3">
               <span class="tag me-1">健康</span>
               <span class="tag me-1">有剪耳</span>
               <span class="tag me-1">感染程度低</span>
             </div>
           </div>
         </div>
-        <div class="col-3 d-flex flex-column align-items-end">
-          <div class="cat-images d-flex align-items-center">
+        <div class="col-12 col-lg-3 d-flex flex-column mt-2 mt-lg-0">
+          <div class="cat-images d-flex align-items-center justify-content-start justify-content-lg-end justify-content-start justify-content-lg-end">
             <img src="/assets/images/innerPage/image (14).jpg" alt="小貓圖片1" class="cat-img me-1">
             <img src="/assets/images/innerPage/image (15).jpg" alt="小貓圖片2" class="cat-img me-1">
             <button class="more-images">
               <img src="/assets/images/icon/24px/solid/more.svg" alt="更多圖片" class="more-icon">
             </button>
           </div>
-          <p class="upload-info mt-2">上傳日期：<span>2025/12/17</span><br>瀏覽次數：442</p> 
-          <div class="mt-2 d-flex justify-content-between align-items-center">
-            <div class="cat-actions">
+          <div class="d-flex justify-content-end">
+            <p class="upload-info mt-2">
+              上傳日期：<span class="upload-date">2025/12/17</span><br>
+              <span class="d-flex justify-content-end">瀏覽次數：442</span></p> 
+          </div>
+            <div class="cat-actions d-flex justify-content-end align-items-center">
               <a href="#" target="_blank">
-                <img src="/assets/images/icon/24px/solid/location.svg" alt="地標" class="location-icon me-2">
+                <img src="/assets/images/icon/24px/solid/location2.svg" alt="地標" class="location-icon me-2">
               </a>
               
               <button class="btn btn-outline-secondary btn-follow">
@@ -264,35 +272,39 @@
   </div>
 
   <!-- 貓咪資訊-2 -->
-  <div class="cat-info-card mt-3">
+  <div class="cat-info-card mt-3 container-fluid">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
           <div class="cat-info">
             <p class="location">台中市西屯區惠來路二段101號</p>
             <h3 class="cat-title">國家歌劇院</h3>
             <p class="cat-description">
               小貓出現的地方大概在轉角路口，有時候可能會跑到馬路中間很危險，人行道的樹是牠的避難所，路過的人都會幫忙餵食物但沒有人想收養⋯
             </p>
-            <div class="cat-tags mt-3">
+            <div class="cat-tags mt-2 mt-lg-3">
               <span class="tag me-1">健康</span>
               <span class="tag me-1">未剪耳</span>
               <span class="tag me-1">感染程度低</span>
             </div>
           </div>
         </div>
-        <div class="col-3 d-flex flex-column align-items-end">
-          <div class="cat-images d-flex align-items-center">
+        <div class="col-12 col-lg-3 d-flex flex-column mt-2 mt-lg-0">
+          <div class="cat-images d-flex align-items-center justify-content-start justify-content-lg-end">
             <img src="/assets/images/innerPage/image2-2.jpg" alt="小貓圖片1" class="cat-img me-1">
             <img src="/assets/images/innerPage/image (16).jpg" alt="小貓圖片2" class="cat-img me-1">
             <button class="more-images">
               <img src="/assets/images/icon/24px/solid/more.svg" alt="更多圖片" class="more-icon">
             </button>
           </div>
-          <p class="upload-info mt-2">上傳日期：<span>2025/03/11</span><br>瀏覽次數：3442</p> 
-          <div class="mt-2 d-flex justify-content-between align-items-center">
-            <div class="cat-actions">
+          <div class="d-flex justify-content-end">
+            <p class="upload-info mt-2">
+              上傳日期：<span class="upload-date">2025/03/11</span><br>
+              <span class="d-flex justify-content-end">瀏覽次數：3442</span></p> 
+          </div>
+          
+            <div class="cat-actions d-flex justify-content-end align-items-center">
               <a href="#" target="_blank">
-                <img src="/assets/images/icon/24px/solid/location.svg" alt="地標" class="location-icon me-2">
+                <img src="/assets/images/icon/24px/solid/location2.svg" alt="地標" class="location-icon me-2">
               </a>
               
               <button class="btn btn-outline-secondary btn-follow">
@@ -308,35 +320,38 @@
   </div>
 
   <!-- 貓咪資訊-3 -->
-  <div class="cat-info-card mt-3">
+  <div class="cat-info-card mt-3 container-fluid">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
           <div class="cat-info">
             <p class="location">台北市信義區光復南路133號</p>
             <h3 class="cat-title">松山文創園區</h3>
             <p class="cat-description">
               非常多流浪貓在附近，而且有些流浪貓身上有些感染，希望路過的人可以發揮愛心，幫忙幫小貓們找個家，目前我已經先把一隻比較嚴重的帶⋯
             </p>
-            <div class="cat-tags mt-3">
+            <div class="cat-tags mt-2 mt-lg-3">
               <span class="tag me-1">不健康</span>
               <span class="tag me-1">未剪耳</span>
               <span class="tag me-1">感染程度高</span>
             </div>
           </div>
         </div>
-        <div class="col-3 d-flex flex-column align-items-end">
-          <div class="cat-images d-flex align-items-center">
+        <div class="col-12 col-lg-3 d-flex flex-column mt-2 mt-lg-0">
+          <div class="cat-images d-flex align-items-center justify-content-start justify-content-lg-end">
             <img src="/assets/images/innerPage/image (17).jpg" alt="小貓圖片1" class="cat-img me-1">
             <img src="/assets/images/innerPage/image (18).jpg" alt="小貓圖片2" class="cat-img me-1">
             <button class="more-images">
               <img src="/assets/images/icon/24px/solid/more.svg" alt="更多圖片" class="more-icon">
             </button>
           </div>
-          <p class="upload-info mt-2">上傳日期：<span>2025/05/09</span><br>瀏覽次數：1121</p> 
-          <div class="mt-2 d-flex justify-content-between align-items-center">
-            <div class="cat-actions">
+          <div class="d-flex justify-content-end">
+            <p class="upload-info mt-2">
+              上傳日期：<span class="upload-date">2025/05/09</span><br>
+              <span class="d-flex justify-content-end">瀏覽次數：1121</span></p> 
+          </div>
+            <div class="cat-actions d-flex justify-content-end align-items-center">
               <a href="#" target="_blank">
-                <img src="/assets/images/icon/24px/solid/location.svg" alt="地標" class="location-icon me-2">
+                <img src="/assets/images/icon/24px/solid/location2.svg" alt="地標" class="location-icon me-2">
               </a>
               
               <button class="btn btn-outline-secondary btn-follow">
@@ -352,35 +367,38 @@
   </div>
 
   <!-- 貓咪資訊-4 -->
-  <div class="cat-info-card mt-3">
+  <div class="cat-info-card mt-3 container-fluid">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
           <div class="cat-info">
             <p class="location">高雄市鼓山區臨海二路17之1號一號出口</p>
             <h3 class="cat-title">捷運西子灣站</h3>
             <p class="cat-description">
               站口外西側草叢附近徘徊，有一隻眼睛失明的貓咪，感覺行走有困難，身體上有多處受傷，經過的民眾想要幫忙處理，但因為貓咪警戒心很⋯
             </p>
-            <div class="cat-tags mt-3">
+            <div class="cat-tags mt-2 mt-lg-3">
               <span class="tag me-1">不健康</span>
               <span class="tag me-1">未剪耳</span>
               <span class="tag me-1">感染程度高</span>
             </div>
           </div>
         </div>
-        <div class="col-3 d-flex flex-column align-items-end">
-          <div class="cat-images d-flex align-items-center">
+        <div class="col-12 col-lg-3 d-flex flex-column mt-2 mt-lg-0">
+          <div class="cat-images d-flex align-items-center justify-content-start justify-content-lg-end">
             <img src="/assets/images/innerPage/image (19) 1.jpg" alt="小貓圖片1" class="cat-img me-1">
             <img src="/assets/images/innerPage/image (20).jpg" alt="小貓圖片2" class="cat-img me-1">
             <button class="more-images">
               <img src="/assets/images/icon/24px/solid/more.svg" alt="更多圖片" class="more-icon">
             </button>
           </div>
-          <p class="upload-info mt-2">上傳日期：<span>2027/08/21</span><br>瀏覽次數：1542</p> 
-          <div class="mt-2 d-flex justify-content-between align-items-center">
-            <div class="cat-actions">
+          <div class="d-flex justify-content-end">
+            <p class="upload-info mt-2">
+              上傳日期：<span class="upload-date">2027/08/21</span><br>
+              <span class="d-flex justify-content-end">瀏覽次數：1542</span></p> 
+          </div>
+            <div class="cat-actions d-flex justify-content-end align-items-center">
               <a href="#" target="_blank">
-                <img src="/assets/images/icon/24px/solid/location.svg" alt="地標" class="location-icon me-2">
+                <img src="/assets/images/icon/24px/solid/location2.svg" alt="地標" class="location-icon me-2">
               </a>
               
               <button class="btn btn-outline-secondary btn-follow">
@@ -391,17 +409,16 @@
             </div>
           </div>
         </div>
-        
       </div>
   </div>
-
-  <!-- 資訊更新日 -->
-  <div class="cat-info-update mt-3 text-end">
-      資訊更新：昨日
-  </div>
+  
+  <!-- 資訊更新日 (桌面版顯示) -->
+<div class="cat-info-update d-none d-lg-flex mt-3 d-flex justify-content-end">
+  資訊更新：昨日
+</div>
 
   <!-- 分頁 -->
-  <div class="pagination-section mt-3 mb-4 d-flex justify-content-center">
+  <div class="pagination-section mt-4 mt-lg-3 mb-4 d-flex justify-content-center">
       <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item disabled">
@@ -429,6 +446,11 @@
       </nav>
   </div>
 
+  <!-- 資訊更新日 (手機版顯示) -->
+<div class="cat-info-update d-flex d-lg-none justify-content-center mb-4">
+  資訊更新：昨日
+</div>
+
   <!-- Modal -->
   <div class="modal fade" id="catInfoModal" tabindex="-1" aria-labelledby="catInfoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -437,7 +459,7 @@
       <!-- Modal Header -->
       <div class="modal-header">
         <h5 class="modal-title ms-2" id="catInfoModalLabel">貓咪資訊</h5>
-        <button type="button" class="btn-close modal-close-button me-2" data-bs-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close modal-close-button me-2 align-items-center" data-bs-dismiss="modal" aria-label="Close">
           <img src="/assets/images/icon/24px/line/close.svg" alt="Close">
         </button>
         
@@ -500,41 +522,41 @@
       <h6 class="cat-details-title">健康審核</h6>
       <form>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">1. 有無晶片</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="chip" id="chip-unknown">
-            <label class="form-check-label" for="chip-unknown">未知</label>
+          <label class="form-label me-2 d-flex align-items-end">1. 有無晶片</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-unknown">
+            <label class="form-check-label me-4" for="chip-unknown">未知</label>
 
-            <input type="radio" class="form-check-input" name="chip" id="chip-yes">
-            <label class="form-check-label" for="chip-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-yes">
+            <label class="form-check-label me-4" for="chip-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="chip" id="chip-no">
+            <input type="radio" class="adopt-form-check-input" name="chip" id="chip-no">
             <label class="form-check-label" for="chip-no">無</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">2. 有無節育</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-unknown">
-            <label class="form-check-label" for="neutered-unknown">未知</label>
+          <label class="form-label me-2 d-flex align-items-end">2. 有無節育</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-unknown">
+            <label class="form-check-label me-4" for="neutered-unknown">未知</label>
 
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-yes">
-            <label class="form-check-label" for="neutered-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-yes">
+            <label class="form-check-label me-4" for="neutered-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="neutered" id="neutered-no">
+            <input type="radio" class="adopt-form-check-input" name="neutered" id="neutered-no">
             <label class="form-check-label" for="neutered-no">無</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">3. 重大感染</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="infection" id="infection-severe">
-            <label class="form-check-label" for="infection-severe">嚴重</label>
+          <label class="form-label me-2 d-flex align-items-end">3. 重大感染</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-severe">
+            <label class="form-check-label me-4" for="infection-severe">嚴重</label>
 
-            <input type="radio" class="form-check-input" name="infection" id="infection-yes">
-            <label class="form-check-label" for="infection-yes">有</label>
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-yes">
+            <label class="form-check-label me-4" for="infection-yes">有</label>
 
-            <input type="radio" class="form-check-input" name="infection" id="infection-no">
+            <input type="radio" class="adopt-form-check-input" name="infection" id="infection-no">
             <label class="form-check-label" for="infection-no">無</label>
           </div>
         </div>
@@ -546,41 +568,41 @@
       <h6 class="cat-details-title">其餘提供</h6>
       <form>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">1. 食物提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="food" id="food-little">
-            <label class="form-check-label" for="food-little">少量</label>
+          <label class="form-label me-2 d-flex align-items-end">1. 食物提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-little">
+            <label class="form-check-label me-4" for="food-little">少量</label>
 
-            <input type="radio" class="form-check-input" name="food" id="food-medium">
-            <label class="form-check-label" for="food-medium">中</label>
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-medium">
+            <label class="form-check-label modal-check-label" for="food-medium">中</label>
 
-            <input type="radio" class="form-check-input" name="food" id="food-much">
+            <input type="radio" class="adopt-form-check-input" name="food" id="food-much">
             <label class="form-check-label" for="food-much">多</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">2. 保暖提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="warm" id="warm-little">
-            <label class="form-check-label" for="warm-little">少量</label>
+          <label class="form-label me-2 d-flex align-items-end">2. 保暖提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-little">
+            <label class="form-check-label me-4" for="warm-little">少量</label>
 
-            <input type="radio" class="form-check-input" name="warm" id="warm-medium">
-            <label class="form-check-label" for="warm-medium">中</label>
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-medium">
+            <label class="form-check-label modal-check-label" for="warm-medium">中</label>
 
-            <input type="radio" class="form-check-input" name="warm" id="warm-much">
+            <input type="radio" class="adopt-form-check-input" name="warm" id="warm-much">
             <label class="form-check-label" for="warm-much">多</label>
           </div>
         </div>
         <div class="form-item d-flex align-items-center">
-          <label class="form-label">3. 避難提供</label>
-          <div class="form-options">
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-box">
-            <label class="form-check-label" for="shelter-box">紙箱</label>
+          <label class="form-label me-2 d-flex align-items-end">3. 避難提供</label>
+          <div class="form-options d-flex align-items-center">
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-box">
+            <label class="form-check-label me-4" for="shelter-box">紙箱</label>
 
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-plastic">
-            <label class="form-check-label" for="shelter-plastic">塑膠</label>
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-plastic">
+            <label class="form-check-label me-4" for="shelter-plastic">塑膠</label>
 
-            <input type="radio" class="form-check-input" name="shelter" id="shelter-other">
+            <input type="radio" class="adopt-form-check-input" name="shelter" id="shelter-other">
             <label class="form-check-label" for="shelter-other">其他</label>
           </div>
         </div>
