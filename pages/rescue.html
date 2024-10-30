@@ -6,7 +6,7 @@
     <title>救援個案募款</title>
 </head>
 <body>
-    <%- include('./layout/header'); -%>
+    <%- include('./layout/header', { pageTitle: '救援個案募款', breadcrumbTitle: '緊急通報' }); -%>
     
    <div class="rescuecontainer nstFont">
                 <div class="upSection">
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="donateBtn">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btnSet" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -89,5 +89,6 @@
 
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script src="../_backToTop.js"></script> 
 </body>
 </html>
