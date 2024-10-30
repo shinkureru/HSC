@@ -1,4 +1,147 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.bg-footer-green{
+  background: linear-gradient(294.62deg, #494E26 4.4%, #B2BA61 74.23%);
+  max-height: 405px;
+  & .second-bg-pink{
+    background-color: #F8F8ED;
+    border-radius: 0px 0px 48px 48px;
+    padding-top: 48px;
+    box-shadow: 0px 15px 15px 0px #4c52108a;
+  }
+}
+
+.HSC-title-footer{
+  padding-right: 72px;
+  border-right: 1px solid white;
+  // text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.473);
+  letter-spacing:0.02em;
+  font-size:56px;
+  color:white;
+  line-height: 56px;
+  font-weight: 600;
+  // padding-bottom: 20px;
+  .span-h{
+    -webkit-font-smoothing: antialiased; 
+    display: inline-block; /* 確保 transform 可以生效 */
+    transition: transform 0.2s ease; /* 增加動畫效果 */
+    color:#767E32;
+    &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+  }
+}
+.span-s{
+  -webkit-font-smoothing: antialiased; 
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: transform 0.2s ease; /* 增加動畫效果 */
+  color:#FFE142;
+  &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#fde155;
+  }
+}
+.span-c{
+  -webkit-font-smoothing: antialiased; 
+  display: inline-block; /* 確保 transform 可以生效 */
+  transition: transform 0.2s ease; /* 增加動畫效果 */
+  color:#767E32;
+  &:hover{
+    transform: scale(1.05); /* 將 H 字母放大 1.1 倍 */
+    color:#79803e;
+  }
+}
+}
+.footer-area{
+  border-bottom: 1px solid white;
+  padding-top: 56px;
+  padding-bottom: 27px;
+  max-height: 357px;
+  & .company-info{
+    color: #ffffff;
+    max-width: 806px;
+    padding-left: 72px;
+     & .contactUs{
+       font-weight: 600;
+       font-size: 16px;
+       line-height: 24px;
+       padding-bottom: 24px;
+     }
+     & .info-body{
+      padding-right: 421px;
+      & .custom-icon-spacing{
+        padding-bottom: 13px;
+      }
+       & .info-content{
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 24px;
+         padding-left: 24px;
+       }
+     }
+   }
+   & .link-group{
+    & .fakeArea{
+      padding-top: 135px;
+    }
+    & .icon-spacing{
+      padding: 0px 12px 0px 12px;
+    }
+    & a{
+      -webkit-font-smoothing: antialiased; 
+      display: inline-block; /* 確保 transform 可以生效 */
+      transition: transform 0.2s ease; /* 增加動畫效果 */
+      &:hover{
+        transform: scale(1.05); /* 將 icon 放大 1.05 倍 */
+      }
+    }
+   }
+}
+.Inc{
+  padding: 12px 0px 12px 0px;
+  font-size: 14px;
+  line-height: 21px;
+  color:#FFFFFF;
+}
+
+
+@media(max-width: 576px){
+  .bg-footer-green{
+    height: 700px !important;
+    max-height:none;
+  }
+}
+
+@media(max-width: 576px){
+  .footer-area{
+    padding-bottom: 15px;
+    max-height: none;
+    max-width: none;
+    padding-left: 10px;
+    flex-direction: column;
+    align-items: start !important;
+    & .big-logo{
+      & .HSC-title-footer{
+        border-right:none;
+        font-size: 80px;
+        line-height: 72px;
+      }
+    }
+    & .company-info{
+      padding-left: 0px;
+      & .contactUs{
+        padding-top: 24px;
+      }
+      & .info-body{
+        padding-right:0px;
+      }
+    }
+    & .link-group{
+      margin-left: -10px !important;
+      & .fakeArea{
+        display: none;
+      }
+      & .link-group{
+        padding-top: 43px;
+      }
+    }
+  }
 }

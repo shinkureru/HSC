@@ -78,6 +78,7 @@
   text-align: center;
 
   .dropdown-item{
+    justify-content: center;
     transition: all 0.3s ease-out;
     --bs-dropdown-link-active-bg: #8a904d;
     width: 144px;
@@ -110,14 +111,88 @@
   height: 55px;
 }
 
+
+
 .member{
-  padding-left: 68px;
+  padding-left: 44px;
   padding-right: 68px;
+  display: flex; /* 默認情況768px顯示小屏區塊 */
+  & .modal-header{
+    background-color:#B2BA61;
+    color:white;
+  }
+  & button{
+    // background-color: transparent !important; /* 移除白色背景 */
+    // border: none !important; /* 移除邊框 */
+    // box-shadow: none !important; /* 移除陰影 */
+  }
+  & .account{
+    margin-bottom: 5px;
+  }
+  & .form-label {
+    margin-bottom: 0px;
+  }
+  & .form-control{
+    width: 88%;
+  }
+  & .modal-body{
+    & .checkbox{
+      margin-left: 60px;
+      margin-top: 15px;
+      // & .custom-checkbox{
+      //   margin-bottom: 1px;
+      //   padding-bottom: 1px;
+      // }
+      & .remember-text{
+        line-height: 14px;
+        font-size: 12px;
+        margin-left: 5px;
+        padding-bottom: 1px;
+      }
+    }
+    & .forget-password{
+      margin-left: 60px;
+      display: inline-block; /* 確保 transform 可以生效 */
+      // transition: all 0.1s ease-in-out 0s; /* 增加動畫效果 */
+      &:active{
+        transform: scale(1.04);
+      }
+    }
+  }
+  & .modal-footer{
+    & .cancel-btn{
+      background-color: transparent; /* 移除背景 */
+      color:rgb(70, 70, 70);
+      margin-right: 10px;
+    }
+    & .save-btn{
+      background-color: #99a700 !important; 
+      padding: 5px;
+      transition: all 0.15s ease-out; /* 增加動畫效果 */
+      &:hover{
+        background-color: #677000 !important; 
+      }
+    }
+  }
+}
+.md-member-img{
+  display: flex; /* 默認情況768px顯示小屏區塊 */
+  padding: 8px;
+  margin-right: 8px;
+}
+.md-side-navbar{
+  display: flex; /* 默認情況768px顯示小屏區塊 */
+  padding: 8px;
+  margin-right: 12px;
+  background-color: transparent; /* 移除白色背景 */
+  border: none; /* 移除邊框 */
+  box-shadow: none; /* 移除陰影 */
 }
 
 
+
 .HSC-custom-logo {
-  font-size: 35;
+  font-size: 35px;
   font-weight: bolder;
   display: inline-block;
   transition-duration: 0.5s;
@@ -166,4 +241,232 @@
   padding-top: 10px;
 }
 
+.md-member{
+  display: none; /* 默認情況下隱藏 */
+}
+.md-member-img{
+  display: none; /* 默認情況下隱藏 */
+}
+.md-side-navbar{
+  display: none; /* 默認情況下隱藏 */
+}
 
+
+@media(max-width: 768px){
+  .navbar{
+    display: none !important;
+  }
+  .member{
+    display: none !important;
+  }
+  .md-member{
+    display: flex; /* 默認情況768px顯示小屏區塊 */
+    & .modal-header{
+      background-color:#B2BA61;
+      color:white;
+    }
+    & button{
+      background-color: transparent !important; /* 移除白色背景 */
+      border: none !important; /* 移除邊框 */
+      box-shadow: none !important; /* 移除陰影 */
+    }
+    & .account{
+      margin-bottom: 5px;
+    }
+    & .form-label {
+      margin-bottom: 0px;
+    }
+    & .form-control{
+      width: 88%;
+    }
+    & .modal-body{
+      & .checkbox{
+        margin-left: 60px;
+        margin-top: 15px;
+        // & .custom-checkbox{
+        //   margin-bottom: 1px;
+        //   padding-bottom: 1px;
+        // }
+        & .remember-text{
+          line-height: 14px;
+          font-size: 12px;
+          margin-left: 5px;
+          padding-bottom: 1px;
+        }
+      }
+      & .forget-password{
+        font-size: 14px;
+        color: #2e7bffd8;
+        margin-left: 60px;
+        display: inline-block; /* 確保 transform 可以生效 */
+        // transition: all 0.1s ease-in-out 0s; /* 增加動畫效果 */
+        &:active{
+          transform: scale(1.04);
+          color:#1956bed8 ;
+        }
+      }
+    }
+    & .modal-footer{
+      & .cancel-btn{
+        color:rgb(70, 70, 70);
+        margin-right: 10px;
+      }
+      & .save-btn{
+        background-color: #99a700 !important; 
+        padding: 5px;
+        transition: all 0.15s ease-out; /* 增加動畫效果 */
+        &:hover{
+          background-color: #677000 !important; 
+        }
+      }
+    }
+  }
+  .md-member-img{
+    display: flex; /* 默認情況768px顯示小屏區塊 */
+    padding: 8px;
+    margin-right: 8px;
+  }
+  .md-side-navbar{
+    display: flex; /* 默認情況768px顯示小屏區塊 */
+    padding: 8px;
+    margin-right: 12px;
+    background-color: transparent; /* 移除白色背景 */
+    border: none; /* 移除邊框 */
+    box-shadow: none; /* 移除陰影 */
+  }
+
+  .custom-offcanvas{
+    border-radius: 40px 0px 0px 0px; /* 設置右上側的圓角 */
+    background: linear-gradient(359.07deg, #494E26 -13.95%, #B2BA61 58.03%);
+    max-width: 130px;
+    border-left:none;
+    & .accordion{
+      --bs-accordion-btn-icon:none;
+      --bs-accordion-btn-active-icon:none;
+      --bs-accordion-bg:none;
+      --bs-accordion-active-bg:none;
+      --bs-accordion-border-color:none;
+      --bs-accordion-body-padding-x:0px;
+      --bs-accordion-body-padding-y:0px;
+      & .accordion-item{
+        margin-top: 30px;
+      }
+      & .accordion-header{
+        & .accordion-button{
+          justify-content: center;
+          color:white;
+          font-size: 15px;
+          padding: 2px;
+          text-align: center;
+          &::after{
+            width:0px;
+            margin-left:0px;
+          }
+        }
+      }
+      & .accordion-body{
+        padding-top: 5px;
+        font-size: 10px;
+        & ul{
+          padding: 0; /* 移除預設內邊距 */
+          margin: 0; /* 移除預設外邊距 */
+          list-style-type: none; /* 移除預設符號 */
+          border-left: 2px solid #99a700;
+          & li{
+            color:rgb(255, 255, 255);
+            margin: 5px 0px 5px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 576px){
+  .pageTitle{
+    font-size: 50px !important;
+  }
+  .homeLogo{
+    padding:10px !important;
+  }
+}
+
+@media(max-width: 375px){
+  .pageTitle{
+    font-size: 50px !important;
+  }
+}
+
+
+.backToTop{
+  position: fixed;      /* 固定在頁面上，無論滾動條怎麼移動都保持不變 */
+  bottom: 0px;         /* 距離下方 20px，可以根據需要調整 */
+  right: 20px;          /* 距離右方 20px，可以根據需要調整 */
+  cursor: pointer;      /* 鼠標移動到圖片上變成手形，表示可以點擊 */
+  width: 100px;          /* 圖片寬度設置為 50px，可以根據需要調整 */
+  height: auto;         /* 保持圖片的高度按比例變化 */
+  z-index: 1000;        /* 設定較高的層級，避免被其他元素覆蓋 */
+  & img{
+    width: 75px;
+    height: auto;
+  }
+}
+
+@media(max-width: 576px){
+  .backToTop{
+    bottom: 0px;
+    width: 25px;
+    & img{
+      width: 30px;
+      height: auto;  
+    }
+  }
+}
+
+
+
+
+
+.donatePig{
+  padding-left: 16px;
+  position: fixed;  /* 固定位置，保持圖片在頁面上的同一位置 */
+  right: 0;         /* 靠近頁面的右邊緣 */
+  top: 30%;         /* 垂直方向放置在頁面的上方 */
+  transform: translateY(-50%); /* 讓圖片居中 */
+  z-index: 1000;    /* 設置較高的層級，避免被其他元素覆蓋 */
+  background-color: #EFF0D7;
+  width: 112px;
+  height: 112px;
+  border-radius: 64px 0 0 64px;
+  & img{
+    animation: shake 2s infinite alternate; /* 持續搖晃 */
+      transform-origin: center; /* 設置搖晃中心點在左下角 */
+      display: inline-block;
+    width: 54px;
+    height: auto;
+    padding-bottom: 4px;
+  }
+  & span{
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+  }
+}
+
+
+@media(max-width: 576px){
+  .donatePig{
+    width: 75px;
+    height: 75px;
+    & span{
+      font-size: 11px !important;
+      line-height: 15px;
+    }
+  }
+  .pig-image{
+    width: 30px !important;      /* 設定圖片的寬度 */
+    height: auto !important;     /* 高度根據寬度等比例變化 */
+    cursor: pointer;  /* 滑鼠指針變為手形，提示圖片可以點擊 */
+  }
+  
+}
