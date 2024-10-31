@@ -1236,6 +1236,7 @@ iframe {
     line-height: 33px !important;
   }
   .productAll{
+    flex-direction: row !important;
     flex-wrap: nowrap;
     overflow-x: auto; /* 允許水平方向滾動 */
     gap: 16px;        /* 設定項目之間的間距（可根據需要調整） */
