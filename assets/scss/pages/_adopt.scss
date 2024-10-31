@@ -1,13 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* 背景延伸至整頁高度 */
+  background: linear-gradient(
+    to bottom,
+    #FFFFFF 50%,      /* 上方 50% 為純白色 */
+    rgba(255, 255, 255, 1) 50%,
+    rgba(248, 248, 237, 0.9) 85%,
+    #F8F8ED 100%      /* 最下方與 footer 無縫銜接 */
+  );
+  user-select: none
+}
+
 /* 搜尋區域 */
 .search-area {
   margin: 0 auto;
   margin-top: 64px;
   background: rgba(239, 240, 215, 1);
-  width: 1296px;
+  max-width: 1296px;
+  width: calc(100% - 24px);
   padding: 24px;
   border-radius: 24px;
 }
 
+@media (max-width: 576px) {
+  .search-area {
+    width: calc(100% - 24px);
+    padding: 24px, 12px,24px,12px;
+  }
+}
+  
 /* 表單標籤樣式 */
 .form-label {
   font-size: 18px;
@@ -117,6 +139,21 @@
   background: linear-gradient(to right, rgba(118, 126, 50, 1) 0%, rgba(118, 126, 50, 1) 50%, #ffffff 50%, #ffffff 100%);
 }
 
+@media (max-width: 576px){
+  .form-range {
+    width: 274px /* 滑桿在手機版佔滿容器寬度 */
+  }
+}
+
+.form-range-mt {
+  margin-top: 12px;
+}
+
+@media (max-width: 576px){
+  .form-range-mt { margin-top: 0px;
+  }
+}
+
 .form-range::-webkit-slider-runnable-track {
   height: 12px;
   border-radius: 100px;
@@ -145,6 +182,21 @@
   appearance: none;
 }
 
+.search-area-mt {
+  margin-top: -6px;
+}
+
+
+.search-area-mb {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 576px){
+  .search-area-mb { margin-bottom: 0px;
+  }
+}
+
+
 /* 範圍數值 */
 .range-value {
   margin-left: 10px;
@@ -156,16 +208,30 @@
 .info-text {
   font-size: 14px;
   color: rgba(149, 158, 67, 1);
-  line-height: 1.5;
+}
+
+.info-text-mt {
+  margin-top: 10px;
+}
+
+@media (max-width: 576px){
+  .info-text-mt { margin-top: 0;
+  }
 }
 
 /* 排序區域 */
 .sort-section {
   margin: 0 auto;
   margin-top: 48px;
-  width: 1296px;
+  max-width: 1296px;
   font-size: 16px;
   color: rgba(41, 41, 41, 1);
+}
+
+@media (max-width: 576px) {
+  .sort-section {
+    width: 100%;
+  }
 }
 
 .sort-section span {
@@ -180,14 +246,32 @@
   color: rgba(118, 126, 50, 1);
 }
 
+@media (max-width: 576px) {
+  .sort-click {
+    margin-left: auto; /* 靠右對齊 */
+    margin-right: 40px;
+    margin-top: -50px; /* 上推，使其與選單對齊 */
+    text-align: right; /* 文字靠右 */
+  }
+}
+
 /* 貓咪資訊卡 */
 .cat-info-card {
   margin: 0 auto;
-  width: 1296px;
+  max-width: 1296px;
+  width: calc(100% - 24px);
   padding: 24px;
   border-radius: 24px;
   gap: 40px;
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+@media (max-width: 576px) {
+  .cat-info-card {
+    width: calc(100% - 24px);
+    padding: 16px;
+  }
 }
 
 .cat-info h3,
@@ -248,9 +332,18 @@
   font-weight: 400;
   color: rgba(152, 152, 152, 1);
 }
-.upload-info span {
+
+.upload-date {
   color: rgba(41, 41, 41, 1);
 }
+
+@media (max-width: 576px) {
+  .upload-info-aie {
+    display: flex;
+    align-items: end !important;
+  }
+}
+
 
 /* 行動按鈕 */
 .cat-actions {
@@ -285,6 +378,12 @@
   margin-left: 8px;
 }
 
+@media (max-width: 576px) {
+  .btn-adopt {
+    width: 160px;
+  }
+}
+
 .btn-adopt:hover {
   background-color: rgba(178, 186, 97, 1);
   color: #fff;
@@ -293,7 +392,8 @@
 /* 更新資訊 */
 .cat-info-update {
   margin: 0 auto;
-  width: 1296px;
+  max-width: 1296px;
+  width: calc(100% - 24px);
   font-size: 14px;
   font-weight: 400;
   color: rgba(152, 152, 152, 1);
@@ -323,7 +423,6 @@
   background-color: white;
   border-radius: 24px;
 }
-
 .modal-header {
   height: 82px;
   background-color: rgba(248, 248, 237, 1);
@@ -346,6 +445,7 @@
   max-width: 768px;
   margin: 0 auto;
   margin-left: 20px;
+  margin-right: 24px;
   flex-grow: 1;
 }
 
@@ -373,6 +473,7 @@
   padding-right: 5px;
   scroll-behavior: smooth; /* 平滑滾動 */
   margin-top: 4px;
+  cursor: pointer;
 }
 
 /* 縮略圖基本樣式 */
@@ -384,9 +485,9 @@
 }
 
 /* 第一張圖片：加框線 */
-.image-with-frame {
-  border: 5px solid rgba(178, 186, 97, 1); /* 綠色框線 */
-}
+// .image-with-frame {
+//   border: 5px solid rgba(178, 186, 97, 1); /* 綠色框線 */
+// }
 
 /* 最後一張圖片的容器：帶有疊加色塊 */
 .image-with-overlay {
@@ -490,6 +591,41 @@
 
 .modal-header {
   border-bottom: none;
+}
+
+.adopt-form-check-input {
+  width: 24px;
+  height: 24px;
+  border-radius: 200px;
+  border: 1.5px solid rgba(224, 226, 180, 1);
+  appearance: none;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.adopt-form-check-input:checked {
+  border: 1.5px solid rgba(178, 186, 97, 1);
+}
+
+.adopt-form-check-input:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgba(178, 186, 97, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 7px;
+}
+
+.form-label {
+  font-family: monospace;
+}
+
+.modal-check-label {
+margin-right: 40px;
 }
 
 .modal-footer {

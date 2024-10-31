@@ -1403,7 +1403,7 @@ iframe {
   top: 30%;         /* 垂直方向放置在頁面的上方 */
   transform: translateY(-50%); /* 讓圖片居中 */
   z-index: 1000;    /* 設置較高的層級，避免被其他元素覆蓋 */
-  background-color: #EFF0D7;
+  background-color: #e7e8b3;
   width: 112px;
   height: 112px;
   border-radius: 64px 0 0 64px;
@@ -1438,4 +1438,7 @@ iframe {
     cursor: pointer;  /* 滑鼠指針變為手形，提示圖片可以點擊 */
   }
   
+}
+.modal-content{
+  border-radius: 24px;
 }

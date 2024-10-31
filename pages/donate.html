@@ -8,7 +8,7 @@
 <body>
     <%- include('./layout/header', { pageTitle: '捐款資料填寫', breadcrumbTitle: '愛心樂捐' }); -%>
 
-    <div class="donateContainer nstFont">
+    <div class="donateContainer nstFont pb-4">
         <div class=" formSet d-flex border border-HSCcolor">
             <div class="donateLeft ">
                 <div class="row">
@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-12 textContainer mobileMt">
                                 <label for="inputText" class="form-label fs-7 fw-semibold">想對團隊說的話(選填)</label>
-                                <textarea class="form-control contentResize border-HSCcolor" id="inputText" placeholder="請輸入內容" maxlength="150"></textarea>
+                                <textarea class="form-control contentResize border-HSCcolor" id="inputText" maxlength="150" placeholder="請輸入內容"></textarea>
                                 <div id="char-count" class="textCount charCount">0/150</div>  
                             </div>
                         </form>
@@ -109,5 +109,6 @@
 
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
+    <script src="../_donate.js"></script>
 </body>
 </html>
