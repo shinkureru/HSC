@@ -141,7 +141,7 @@ body {
 
 @media (max-width: 576px){
   .form-range {
-    width: 274px /* 滑桿在手機版佔滿容器寬度 */
+    width: 100%; /* 滑桿在手機版佔滿容器寬度 */
   }
 }
 
@@ -231,6 +231,7 @@ body {
 @media (max-width: 576px) {
   .sort-section {
     width: 100%;
+    margin: 24px auto;
   }
 }
 
@@ -238,6 +239,13 @@ body {
   font-size: 14px;
   font-weight: 400;
   white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .sort-dropdown-btn {
+    width: 100%;
+    min-width: 147.5px; /* 根據需要設定最小寬度 */
+  }
 }
 
 .sort-click {
@@ -249,7 +257,6 @@ body {
 @media (max-width: 576px) {
   .sort-click {
     margin-left: auto; /* 靠右對齊 */
-    margin-right: 40px;
     margin-top: -50px; /* 上推，使其與選單對齊 */
     text-align: right; /* 文字靠右 */
   }
