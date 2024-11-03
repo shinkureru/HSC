@@ -1,0 +1,1 @@
+import"./main-66abc716.js";const t=document.getElementById("inputText"),o=document.getElementById("char-count");t.addEventListener("input",function(){const e=t.value.length,n=t.getAttribute("maxlength");o.textContent=`(${e}/${n})`});document.getElementById("back-to-top").addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});
