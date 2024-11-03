@@ -309,7 +309,7 @@
 .cat-logo{
   position: absolute; /* 絕對定位，讓圖片可以自由超出容器 */
   top: -300px; /* 調整位置讓圖片向上超出容器 */
-  left: 350px; /* 向左移動超出容器 */
+  left: 630px; /* 向左移動超出容器 */
   width: 275px; /* 調整圖片大小 */
   height: auto;
   z-index: 30; /* 控制疊放順序 */
@@ -323,9 +323,11 @@
 .report-title{
   font-weight:600;
   color:#FFF2DB;
-  font-size: 7rem;
+  font-size: 8rem;
   padding-top: 11rem;
-  line-height: 7rem
+  line-height: 7rem;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -679,7 +681,7 @@ iframe {
     pointer-events: none; /* 使文字無法攔截點擊事件 */
     color: white;
     position:absolute;
-    top:65px;
+    top:60px;
   }
   & .custom-btn{
     line-height: 24px;
