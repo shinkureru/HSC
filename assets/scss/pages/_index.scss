@@ -930,7 +930,7 @@ iframe {
   font-weight: 500;
   padding-bottom: 48px;
   background: linear-gradient(294.62deg, #494E26 4.4%, #B2BA61 74.23%);
-  -webkit-background-clip: text; //這個屬性告訴瀏覽器將背景限制在文字內部，這樣漸變色就會應用到文字上，而不是背景上。 //蛤
+  -webkit-background-clip: text; //這個屬性告訴瀏覽器將背景限制在文字內部，這樣漸變色就會應用到文字上，而不是背景上。 //
   -webkit-text-fill-color: transparent; //裡將文字顏色設置為透明，這樣背景色可以透過文字顯示出來。
 }
 @media(max-width: 576px){
