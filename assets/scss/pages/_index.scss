@@ -309,7 +309,7 @@
 .cat-logo{
   position: absolute; /* 絕對定位，讓圖片可以自由超出容器 */
   top: -300px; /* 調整位置讓圖片向上超出容器 */
-  left: 350px; /* 向左移動超出容器 */
+  left: 630px; /* 向左移動超出容器 */
   width: 275px; /* 調整圖片大小 */
   height: auto;
   z-index: 30; /* 控制疊放順序 */
@@ -323,9 +323,11 @@
 .report-title{
   font-weight:600;
   color:#FFF2DB;
-  font-size: 7rem;
+  font-size: 8rem;
   padding-top: 11rem;
-  line-height: 7rem
+  line-height: 7rem;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -679,7 +681,7 @@ iframe {
     pointer-events: none; /* 使文字無法攔截點擊事件 */
     color: white;
     position:absolute;
-    top:65px;
+    top:60px;
   }
   & .custom-btn{
     line-height: 24px;
@@ -930,7 +932,7 @@ iframe {
   font-weight: 500;
   padding-bottom: 48px;
   background: linear-gradient(294.62deg, #494E26 4.4%, #B2BA61 74.23%);
-  -webkit-background-clip: text; //這個屬性告訴瀏覽器將背景限制在文字內部，這樣漸變色就會應用到文字上，而不是背景上。
+  -webkit-background-clip: text; //這個屬性告訴瀏覽器將背景限制在文字內部，這樣漸變色就會應用到文字上，而不是背景上。 //
   -webkit-text-fill-color: transparent; //裡將文字顏色設置為透明，這樣背景色可以透過文字顯示出來。
 }
 @media(max-width: 576px){
